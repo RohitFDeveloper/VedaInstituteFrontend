@@ -8,6 +8,7 @@ import TopHeader from '../common/top-header/index.jsx';
 
 // Material-ui
 import { Grid } from '@mui/material';
+import Home from 'pages/home/index';
 // const Header = lazy(() => import('./Header'));
 // const Header = lazy(() => import('./Header'));
 
@@ -21,7 +22,9 @@ const Layout = () => {
                 <Grid item>
                     <Header />
                 </Grid>
-                <Grid item>other pages</Grid>
+                <Grid item>
+                    <Home />
+                </Grid>
                 <Grid item>footer</Grid>
             </Grid>
         </>

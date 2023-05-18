@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
@@ -15,15 +17,14 @@ import CloseIcon from '@mui/icons-material/Close';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { Drawer, List, ListItem, ListItemText, Stack } from '@mui/material';
+import { Divider, Drawer, Grid, List, ListItem, ListItemText, Stack } from '@mui/material';
 // import Buttons from '../Button/Button';
-
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 // import Logo from './'
+import Icon from '@mui/material/Icon';
 import SearchIcon from '@mui/icons-material/Search';
 // import colors
 import colors from 'assets/scss/_themes-vars.module.scss';
-// import primary from '../style.scss';
-// import secondary from '../style.scss';
 import { Link } from 'react-router-dom';
 import Logo from '../logo';
 
@@ -32,27 +33,65 @@ const pages2 = [
     {
         id: 1,
         title: 'Home',
+        url: '/Home'
+    },
+    {
+        id: 2,
+        title: 'About Us',
+        url: '/home'
+    },
+    {
+        id: 3,
+        title: 'Courses',
+        url: '/'
+    },
+    {
+        id: 4,
+        title: 'Gallery',
+        url: '/'
+    },
+    {
+        id: 5,
+        title: 'Job Portal',
+        url: '/'
+    },
+    {
+        id: 6,
+        title: 'Our Topper',
+        url: '/'
+    },
+    {
+        id: 7,
+        title: 'Scholarship',
+        url: '/'
+    },
+    {
+        id: 8,
+        title: 'Contact US',
+        url: '/'
+    }
+];
+
+const online_Material = [
+    {
+        id: 1,
+        title: 'Online Store',
         url: '/'
     },
     {
         id: 2,
-        title: 'Product',
-        url: '/contact'
+        title: 'Online Test Series',
+        url: '/'
     },
     {
         id: 3,
-        title: 'Our Services',
-        url: '/contact'
+        title: 'Online Admission',
+        url: '/'
     },
     {
         id: 4,
-        title: 'About Us',
-        url: '/about_us'
-    },
-    {
-        id: 5,
-        title: 'Contact',
-        url: '/contact'
+        title: 'Free Study Material',
+        url: '/'
     }
 ];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -132,37 +171,19 @@ function Header() {
         <AppBar sx={style}>
             <Container maxWidth="xl" sx={{ maxWidth: '100%' }}>
                 <Toolbar disableGutters>
-                    {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
                     <Typography
-                        variant="h6"
                         noWrap
                         component="a"
-                        href="/test"
+                        href="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' }
                         }}
                     >
-                        <Logo width="100%" height="50vh" />
+                        <Logo width="100%" height="100vh" />
                     </Typography>
-                    {/* <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/test"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontWeight: 700,
-                            letterSpacing: '.1rem',
-                            textDecoration: 'none'
-                        }}
-                    >
-                        <Stack direction="column" fontWeight="600">
-                            <Stack sx={{ color: '#01948a', lineHeight: '1.3' }}>Nabh</Stack>
-                            <Stack sx={{ color: '#ec6e33', lineHeight: '1.3' }}>Technology</Stack>
-                        </Stack>
-                    </Typography> */}
+
+                    {/* ---------- For Mobile Screen ----------  */}
                     <Box
                         sx={{
                             flexGrow: 1,
@@ -243,31 +264,69 @@ function Header() {
                         </Typography> */}
                     </Box>
                     {/* ---------- Menus Items for large screen ----------- */}
-                    <Box
-                        sx={{
-                            flexGrow: 1,
-                            display: { xs: 'none', md: 'flex' },
-                            justifyContent: 'center'
-                        }}
-                    >
-                        {pages2.map((page2) => (
-                            <Link to={page2.url} style={{ textDecoration: 'none' }}>
-                                <Button
-                                    key={pages2.id}
-                                    onClick={handleCloseNavMenu}
-                                    sx={{
-                                        my: 2,
-                                        color: '#1b1d21',
-                                        display: 'block',
-                                        textTransform: 'capitalize',
-                                        fontWeight: '600'
-                                    }}
-                                >
-                                    {page2.title}
-                                </Button>
-                            </Link>
-                        ))}
-                    </Box>
+                    <Grid container direction={'column'}>
+                        <Box
+                            sx={{
+                                flexGrow: 1,
+                                display: { xs: 'none', md: 'flex' },
+                                justifyContent: 'center'
+                            }}
+                        >
+                            <Grid container direction={'row'} sx={{ justifyContent: 'space-around', alignItems: 'center' }}>
+                                <Grid item>
+                                    <List sx={{ display: 'flex', color: color.blackMain, pt: 2, pb: 0 }}>
+                                        {online_Material.map((index) => (
+                                            <ListItem key={online_Material.id}>
+                                                <Button variant="outlined" sx={{ whiteSpace: 'nowrap' }} startIcon={<MenuBookIcon />}>
+                                                    {index.title}
+                                                </Button>
+                                            </ListItem>
+                                        ))}
+                                    </List>
+                                </Grid>
+                                <Grid item>
+                                    <List sx={{ display: 'flex', color: color.blackMain, pt: 2, pb: 0 }}>
+                                        <ListItem>
+                                            <Button>Login</Button>
+                                        </ListItem>
+                                        <Divider orientation="vertical" flexItem />
+                                        <ListItem>
+                                            <Button variant="contained">Register</Button>
+                                        </ListItem>
+                                    </List>
+                                </Grid>
+                            </Grid>
+                        </Box>
+                        <Box
+                            sx={{
+                                flexGrow: 1,
+                                display: { xs: 'none', md: 'flex' },
+                                justifyContent: 'center'
+                            }}
+                        >
+                            <List sx={{ display: 'flex', height: '50px' }}>
+                                {pages2.map((page2) => (
+                                    <ListItem key={pages2.id}>
+                                        <Button
+                                            onClick={handleCloseNavMenu}
+                                            sx={{
+                                                my: 2,
+                                                color: '#1b1d21',
+                                                display: 'block',
+                                                textTransform: 'capitalize',
+                                                fontWeight: '600',
+                                                whiteSpace: 'nowrap'
+                                            }}
+                                        >
+                                            <Link to={page2.url} style={{ textDecoration: 'none' }}>
+                                                {page2.title}
+                                            </Link>
+                                        </Button>
+                                    </ListItem>
+                                ))}
+                            </List>
+                        </Box>
+                    </Grid>
                     {/* --------------- Search Button --------------- */}
                     {/* <Box sx={{ flexGrow: 0 }}>
                         <Stack direction="row" spacing={2}>
@@ -282,33 +341,10 @@ function Header() {
                                             <SearchIcon />
                                         </Avatar>
                                     </IconButton>
-                                </Tooltip>
-                                {/* <Menu
-                  sx={{ mt: "45px" }}
-                  id="menu-appbar"
-                  anchorEl={anchorElUser}
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  open={Boolean(anchorElUser)}
-                  onClose={handleCloseUserMenu}
-                >
-                  {settings.map((setting) => (
-                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                      <Typography textAlign="center">{setting}</Typography>
-                    </MenuItem>
-                  ))}
-                </Menu> */}
+                                </Tooltip>  
                     {/* </Stack>
                         </Stack>
-                    // </Box> */}{' '}
-                    // */}
+                    // </Box> */}
                 </Toolbar>
             </Container>
         </AppBar>

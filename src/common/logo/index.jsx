@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // material-ui
 import logo from 'assets/images/logo.png';
 // eslint-disable-next-line no-unused-vars
