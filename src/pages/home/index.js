@@ -1,22 +1,48 @@
 /* eslint-disable no-unused-vars */
-// Material-ui
-import { Grid } from '@mui/material';
 
 // project imports
-import Carousel from './components/carousel.jsx';
-import About from './components/about.jsx';
+import About from './components/about';
+import Courses from './components/courses';
+import OurExperties from './components/our-experties';
+import Selections from './components/selections/selections';
+import AwardAchievement from './components/awards-achievement/awards-achievement';
+import Testimonials from './components/testimonials/testimonials';
+import Slider from './components/slider';
+import Ourfact from './components/ourfact';
+import Publication from './components/publication';
 
 const Home = () => {
     return (
         <>
-            <Grid container direction="column" alignItems="stretch" spacing={0}>
-                <Grid item>
-                    <Carousel />
-                </Grid>
-                <Grid item>
+            <div class="container ">
+                <div class="row">
+                    <Slider />
+                </div>
+                <div class="row">
                     <About />
-                </Grid>
-            </Grid>
+                </div>
+                <div class="row">
+                    <OurExperties />
+                </div>
+                <div class="row">
+                    <Courses />
+                </div>
+                <div class="row">
+                    <Selections />
+                </div>
+                <div class="row">
+                    <AwardAchievement />
+                </div>
+                <div class="row">
+                    <Ourfact />
+                </div>
+                <div class="row">
+                    <Publication />
+                </div>
+                <div class="row">
+                    <Testimonials />
+                </div>
+            </div>
         </>
     );
 };

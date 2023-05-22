@@ -1,16 +1,17 @@
 /* eslint-disable no-unused-vars */
-import ReactDOM from 'react-dom/client';
-// project imports
-// import React from 'react';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-// thrid party
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
-// style + assets
-import 'assets/scss/style.scss';
+// project imports
+import 'assets/css/style.css';
+// import 'assets/js/main.js';
+import App from './App';
 import config from './config';
+
+// thrid party
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
