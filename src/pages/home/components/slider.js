@@ -9,7 +9,7 @@ const Slider = () => {
         <>
             <section className="slider-area slider-active px-0">
                 <div className="single-slider d-flex align-items-center bg_cover" style={{ backgroundImage: `url(${Image1})` }}>
-                    <div className="container">
+                    <div className="container fluid">
                         <div className="slider-content">
                             <h2 className="title" data-animation="fadeInLeft" data-delay="0.2s">
                                 Education is the most powerful Weapon

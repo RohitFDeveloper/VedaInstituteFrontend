@@ -1,4 +1,8 @@
 /* eslint-disable no-unused-vars */
+import { useState } from 'react';
+
+// bootstrap
+import { Button, Modal } from 'react-bootstrap';
 
 // project imports
 import About from './components/about';

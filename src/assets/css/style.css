@@ -1363,12 +1363,12 @@ input[type="submit"] {
 }
 @media (max-width: 767px) {
     .slider-area {
-        padding-top: 190px;
+        padding-top: 0;
     }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .slider-area {
-        padding-top: 155px;
+        padding-top: 0;
     }
 }
 .single-slider {
@@ -5771,32 +5771,32 @@ input[type="submit"] {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .page-banner {
-        padding-top: 155px;
+        padding-top: 100px;
     }
 }
 @media (max-width: 767px) {
     .page-banner {
-        padding-top: 190px;
+        padding-top: 100px;
     }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .page-banner {
-        padding-top: 155px;
+        padding-top: 100px;
     }
 }
 .banner-content {
-    padding-top: 150px;
+    padding-top: 0px;
     padding-bottom: 140px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .banner-content {
-        padding-top: 90px;
+        padding-top: 0px;
         padding-bottom: 90px;
     }
 }
 @media (max-width: 767px) {
     .banner-content {
-        padding-top: 75px;
+        padding-top: 0px;
         padding-bottom: 75px;
     }
 }
@@ -6865,6 +6865,7 @@ input[type="submit"] {
 }
 .teacher-details-tab {
     padding-top: 70px;
+    padding-bottom: 150px;
 }
 .teacher-details-tab .nav li {
     border-left: 1px solid #dbdbdb;
@@ -8532,3 +8533,38 @@ input[type="submit"] {
         line-height: 26px;
     }
 }
+
+.blink {
+    animation: blinker .75s linear infinite;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.scroll-to-top-button:hover {
+  opacity: 1;
+}
+
+.scroll-to-top-button {
+    z-index: 1000;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background-color: var(--primaryMain);
+    color: #ffffff;
+    padding: 10px 16px;
+    font-size: 18px;
+    opacity: 0.9;
+    border-radius: 50%;
+    border: none;
+  }
+  
+  .scroll-percentage-indicator::before {
+    content: 'Scroll Progress: ';
+  }
+  
+  .scroll-percentage-indicator::after {
+    content: '%';
+  }

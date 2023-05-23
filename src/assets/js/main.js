@@ -1,5 +1,5 @@
-import './vendor/jquery-3.6.0.min.js';
-import './vendor/modernizr-3.7.1.min.js';
+// import './vendor/jquery-3.6.0.min.js';
+// import './vendor/modernizr-3.7.1.min.js';
 
 // import './plugins/popper.min.js';
 // import './plugins/bootstrap.min.js';

@@ -5,7 +5,17 @@ import { Routes, Route, Outlet, Link } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
 // componnets routing
-const Layout = lazy(() => import('./layout/index.js'));
+// const Layout = lazy(() => import('layout/index.js'));
+import Layout from 'layout/index';
+const Home = lazy(() => import('pages/home/index'));
+// Start About -> subpages
+const AboutInstitute = lazy(() => import('pages/about/about-institute/index'));
+const ExperTeam = lazy(() => import('pages/about/expert-team/index'));
+// End About -> subpages
+
+// Start Courses -> subpages
+const Upsc = lazy(() => import('pages/courses/upsc/index'));
+// End Courses -> subpages
 
 const App = () => {
     return (
@@ -13,8 +23,10 @@ const App = () => {
             <Suspense fallback={<div>Please wait...</div>}>
                 <Routes>
                     <Route path="/" element={<Layout />}>
-                        <Route index element={<div>This is homepage</div>} />
-                        {/* <Route path="contact" element={<Contact />} /> */}
+                        <Route index element={<Home />} />
+                        <Route path="about/institute" element={<AboutInstitute />} />
+                        <Route path="about/team" element={<ExperTeam />} />
+                        <Route path="course/upsc" element={<Upsc />} />
                     </Route>
                 </Routes>
             </Suspense>
