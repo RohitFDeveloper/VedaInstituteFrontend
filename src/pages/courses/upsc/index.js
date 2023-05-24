@@ -100,26 +100,26 @@ const index = () => {
                                 <div class="row">
                                     <div class="col-lg-4 col-sm-6">
                                         <div class="single-content-tab">
-                                            <h4 class="title">Professor</h4>
-                                            <p>Business Administration</p>
-                                            <p>Boston University</p>
-                                            <p>2012 to 2013</p>
+                                            <h4 class="title">Limited</h4>
+                                            <p>Access few pdfs</p>
+                                            <p>Access few videos</p>
+                                            <p>Notifications</p>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-sm-6">
                                         <div class="single-content-tab">
-                                            <h4 class="title">Assistant Professor</h4>
-                                            <p>Business Administration</p>
-                                            <p>Boston University</p>
-                                            <p>2010 to 2012</p>
+                                            <h4 class="title">Full</h4>
+                                            <p>Access all pdfs</p>
+                                            <p>Access all videos</p>
+                                            <p>Notifications</p>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-sm-6">
                                         <div class="single-content-tab">
-                                            <h4 class="title">Lecturer</h4>
-                                            <p>Business Administration</p>
+                                            <h4 class="title">Buy</h4>
+                                            {/* <p>Business Administration</p>
                                             <p>Boston University</p>
-                                            <p>2008 to 2010</p>
+                                            <p>2008 to 2010</p> */}
                                         </div>
                                     </div>
                                 </div>
