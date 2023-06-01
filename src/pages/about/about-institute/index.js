@@ -2,7 +2,7 @@ import React from 'react';
 import aboutBg1 from 'assets/images/page-banner.webp';
 import aboutCampus from 'assets/images/campus-1.webp';
 import aboutTech1 from 'assets/images/teachers/teacher-1.webp';
-const index = () => {
+const Index = () => {
     return (
         <>
             {/* <!--====== Page Banner Start ======--> */}
@@ -70,4 +70,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Index;

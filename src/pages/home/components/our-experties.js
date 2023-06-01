@@ -53,16 +53,16 @@ function OurExperties() {
     };
     return (
         <>
-            <div class="specialty-area">
-                <div class="container-fluid" style={style.container}>
+            <div className="specialty-area">
+                <div className="container-fluid" style={style.container}>
                     {courseData.map((item, index) => (
                         <div key={index}>
-                            <div class="single-specialty active mt-30">
-                                <div class="specialty-box" style={style.border}>
-                                    <div class="box-icon">
+                            <div className="single-specialty active mt-30">
+                                <div className="specialty-box" style={style.border}>
+                                    <div className="box-icon">
                                         <img src={item.icon} width="70" height="70" alt="icon" />
                                     </div>
-                                    <div class="box-content">
+                                    <div className="box-content">
                                         <p>
                                             {item.courseName} <br /> {item.courseContent}
                                         </p>
@@ -71,7 +71,7 @@ function OurExperties() {
                             </div>
                         </div>
                     ))}
-                    {/* <div class="row no-gutters wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.2s">
+                    {/* <div className="row no-gutters wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.2s">
                         
                     </div> */}
                 </div>

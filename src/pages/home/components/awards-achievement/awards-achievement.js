@@ -8,27 +8,27 @@ import { productData, responsive } from './data';
 import './awards-achievement.css';
 
 export default function AwardsAchievement() {
-    const product = productData.map((item) => (
-        <Product name={item.name} url={item.imageurl} price={item.price} description={item.description} />
+    const product = productData.map((item, index) => (
+        <Product key={index} name={item.name} url={item.imageurl} price={item.price} description={item.description} />
     ));
 
     return (
-        <section class="about-area">
+        <section className="about-area">
             <div className="container">
                 <div className="row">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-6 col-md-9">
-                            <div class="section-title-2 text-center">
-                                <h2 class="title">Awards & Achievements</h2>
-                                <span class="line"></span>
+                    <div className="row justify-content-center">
+                        <div className="col-lg-6 col-md-9">
+                            <div className="section-title-2 text-center">
+                                <h2 className="title">Awards & Achievements</h2>
+                                <span className="line"></span>
                                 <p style={{ color: '#010101' }}>
                                     Even slightly believable. If you are going use a passage of Lorem Ipsum need some
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="section mt-40">
+                    <div className="row">
+                        <div className="section mt-40">
                             <Carousel showDots={true} responsive={responsive}>
                                 {product}
                             </Carousel>

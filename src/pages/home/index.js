@@ -18,34 +18,32 @@ import Publication from './components/publication';
 const Home = () => {
     return (
         <>
-            <div class="container ">
-                <div class="row">
-                    <Slider />
-                </div>
-                <div class="row">
-                    <About />
-                </div>
-                <div class="row">
-                    <OurExperties />
-                </div>
-                <div class="row">
-                    <Courses />
-                </div>
-                <div class="row">
-                    <Selections />
-                </div>
-                <div class="row">
-                    <AwardAchievement />
-                </div>
-                <div class="row">
-                    <Ourfact />
-                </div>
-                <div class="row">
-                    <Publication />
-                </div>
-                <div class="row">
-                    <Testimonials />
-                </div>
+            <div>
+                <Slider />
+            </div>
+            <div>
+                <About />
+            </div>
+            <div>
+                <OurExperties />
+            </div>
+            <div>
+                <Courses />
+            </div>
+            <div>
+                <Selections />
+            </div>
+            <div>
+                <AwardAchievement />
+            </div>
+            <div>
+                <Ourfact />
+            </div>
+            <div>
+                <Publication />
+            </div>
+            <div>
+                <Testimonials />
             </div>
         </>
     );

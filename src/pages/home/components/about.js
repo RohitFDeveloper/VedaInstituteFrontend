@@ -17,50 +17,50 @@ import Icon4 from 'assets/images/about/icon/icon-4.webp';
 function About() {
     return (
         <>
-            <section class="about-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <div class="about-content mt-40">
-                                <h2 class="about-title">
+            <section className="about-area">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-5">
+                            <div className="about-content mt-40">
+                                <h2 className="about-title">
                                     Best <span>Educational</span> Environment
                                 </h2>
-                                <span class="line"></span>
+                                <span className="line"></span>
                                 <p>
                                     Even slightly believable. If you are going use passage of Lorem Ipsum need desire to obtain pain of
                                     itself, because it is pain de sires many pain of itself occur for your study <br /> <br /> Even slightly
                                     believable. If you are going use passage of Lorem Ipsum need desir
                                 </p>
-                                <a href="#" class="main-btn">
+                                <a href="#" className="main-btn">
                                     Explore
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-7">
-                            <div class="about-image mt-50">
-                                <div class="single-image image-1">
+                        <div className="col-lg-7">
+                            <div className="about-image mt-50">
+                                <div className="single-image image-1">
                                     <img src={About1} width="290" height="290" alt="about" />
                                 </div>
-                                <div class="single-image image-2">
+                                <div className="single-image image-2">
                                     <img src={About2} width="225" height="225" alt="about" />
                                 </div>
-                                <div class="single-image image-3">
+                                <div className="single-image image-3">
                                     <img src={About3} width="190" height="190" alt="about" />
                                 </div>
-                                <div class="single-image image-4">
+                                <div className="single-image image-4">
                                     <img src={About4} width="140" height="140" alt="about" />
                                 </div>
 
-                                <div class="about-icon icon-1">
+                                <div className="about-icon icon-1">
                                     <img src={Icon1} width="46" height="46" alt="icon" />
                                 </div>
-                                <div class="about-icon icon-2">
+                                <div className="about-icon icon-2">
                                     <img src={Icon2} width="46" height="46" alt="icon" />
                                 </div>
-                                <div class="about-icon icon-3">
+                                <div className="about-icon icon-3">
                                     <img src={Icon3} width="46" height="46" alt="icon" />
                                 </div>
-                                <div class="about-icon icon-4">
+                                <div className="about-icon icon-4">
                                     <img src={Icon4} width="46" height="46" alt="icon" />
                                 </div>
                             </div>

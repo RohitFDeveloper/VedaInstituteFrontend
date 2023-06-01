@@ -6,30 +6,30 @@ import { Outlet } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 
 // project imports
-import Poster from '../common/poster/index';
-import ScrollTop from '../common/scroll-top/index';
-import ContactIcons from '../common/contact-icons/index';
-import TopHeader from '../common/top-header/index';
-import Header from '../common/header/index';
-import Footer from '../common/footer/index';
+import Poster from 'common/poster/index';
+import ScrollTop from 'common/scroll-top/index';
+import ContactIcons from 'common/contact-icons/index';
+import TopHeader from 'common/top-header/index';
+import Header from 'common/header/index';
+import Footer from 'common/footer/index';
 
 function Index() {
     return (
         <>
-            <Container fluid>
-                <Row>
+            <div>
+                <div>
                     <TopHeader />
-                </Row>
-                <Row>
+                </div>
+                <div>
                     <Header />
-                </Row>
-                <Row>
+                </div>
+                <div>
                     <Outlet />
-                </Row>
-                <Row>
+                </div>
+                <div>
                     <Footer />
-                </Row>
-            </Container>
+                </div>
+            </div>
 
             {/* info and contact components */}
             <Poster />

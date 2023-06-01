@@ -25,7 +25,7 @@ const topMenuData = [
     },
     {
         title: 'Online Admission',
-        url: '/',
+        url: 'admission',
         dropdown: false
     },
     {
@@ -36,6 +36,11 @@ const topMenuData = [
     {
         title: 'Scholarship Test',
         url: '/',
+        dropdown: false
+    },
+    {
+        title: 'Ask a question?',
+        url: 'ask-question',
         dropdown: false
     }
     // {
@@ -56,17 +61,8 @@ const mainMenuData = [
     },
     {
         title: 'About Us',
-        dropdown: true,
-        submenu: [
-            {
-                title: 'About Institute',
-                url: 'about/institute'
-            },
-            {
-                title: 'Expert Team',
-                url: 'about/team'
-            }
-        ]
+        dropdown: false,
+        url: 'about-us'
     },
     {
         title: 'Courses',
@@ -78,11 +74,11 @@ const mainMenuData = [
             },
             {
                 title: 'SSC',
-                url: '/'
+                url: 'course/ssc'
             },
             {
-                title: 'Bank',
-                url: '/'
+                title: 'Bank PO',
+                url: 'course/bank-po'
             }
         ]
     },
@@ -93,27 +89,18 @@ const mainMenuData = [
     },
     {
         title: 'Gallery',
-        dropdown: true,
-        submenu: [
-            {
-                title: 'Photo Gallery',
-                url: '/'
-            },
-            {
-                title: 'Video Gallery',
-                url: '/'
-            }
-        ]
+        dropdown: false,
+        url: 'gallery'
     },
     {
         title: 'Job Portal',
         dropdown: false,
-        url: '/'
+        url: 'job-portal'
     },
     {
         title: 'Previous Year Papers',
         dropdown: false,
-        url: '/'
+        url: 'previous-year-papers'
     },
     {
         title: 'Daily Current Updates',
@@ -123,11 +110,11 @@ const mainMenuData = [
     {
         title: 'Contact Us',
         dropdown: false,
-        url: '/'
+        url: 'contact-us'
     }
 ];
 function Index() {
-    const isMobile = useMediaQuery({ maxWidth: 767 });
+    const isMobile = useMediaQuery({ maxWidth: 991 });
     // exta css
     const style = {
         links: {
@@ -185,14 +172,14 @@ function Index() {
                     <Stack gap={3}>
                         <Row>
                             <Col style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }}>
-                                <Link to="/" style={{ ...style.links, ...style.credButton }} onClick={handleClose}>
+                                <Link to="/login" style={{ ...style.links, ...style.credButton }} onClick={handleClose}>
                                     <i className="fas fa-sign-in-alt" style={style.credButton.space}></i>
                                     Login
                                 </Link>
                                 <span className="px-2" style={style.links}>
                                     |
                                 </span>
-                                <Link to="/" style={{ ...style.links, ...style.credButton }} onClick={handleClose}>
+                                <Link to="/register" style={{ ...style.links, ...style.credButton }} onClick={handleClose}>
                                     <i className="fas fa-user-plus" style={style.credButton.space}></i>
                                     Register
                                 </Link>
@@ -270,7 +257,7 @@ function Index() {
                         <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px', width: '100%' }} navbarScroll>
                             <Container fluid>
                                 <Row style={{ alignItems: 'center' }}>
-                                    <Col lg="9">
+                                    <Col lg="10">
                                         <Row>
                                             <Col style={{ display: 'flex' }}>
                                                 {TopMenu.map((data, index) => {
@@ -301,18 +288,18 @@ function Index() {
                                             </Col>
                                         </Row>
                                     </Col>
-                                    <Col lg="3">
+                                    <Col lg="2">
                                         <Row>
                                             <Col style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }}>
                                                 <Nav.Link style={style.links}>
-                                                    <Link to="/">
+                                                    <Link to="/login">
                                                         <i className="fas fa-sign-in-alt" style={{ margin: '0 5px' }}></i>
                                                         Login
                                                     </Link>
                                                 </Nav.Link>
-                                                <span className="px-2">|</span>
+                                                <span>|</span>
                                                 <Nav.Link style={style.links}>
-                                                    <Link to="/">
+                                                    <Link to="/register">
                                                         <i className="fas fa-user-plus" style={{ margin: '0 5px' }}></i>
                                                         Register
                                                     </Link>

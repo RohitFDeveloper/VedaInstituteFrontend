@@ -3,21 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-pdf/renderer": "^3.1.9",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
+    "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.5.2",
     "react-icons": "^4.8.0",
     "react-multi-carousel": "^2.8.3",
+    "react-pdf": "^5.0.0",
     "react-responsive": "^9.0.2",
     "react-router": "^6.11.1",
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^1.1.1"
   },
   "scripts": {
     "dev": "react-scripts start",
@@ -68,5 +72,9 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "prettier": "^2.7.1",
     "sass": "^1.53.0"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
   }
 }
