@@ -2,6 +2,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { Link } from 'react-router-dom';
 
 // exta css
 const style = {
@@ -11,21 +13,13 @@ const style = {
         left: '10px',
         padding: '14px 18px',
         borderRadius: '50%',
-        border: 'none'
-    },
-    button1: {
-        bottom: '70px',
-        backgroundColor: 'var(--primaryMain)',
-        color: 'white'
+        border: 'none',
+        animation: 'bot-to-top 2s ease-out'
     },
     button2: {
-        bottom: '150px',
+        bottom: '70px',
         backgroundColor: '#25D366',
         color: 'white'
-    },
-    icon1: {
-        color: '#fff',
-        fontSize: '24px'
     },
     icon2: {
         color: '#fff',
@@ -52,9 +46,16 @@ const style = {
 };
 
 function index() {
-    const callUs = () => {
-        console.log('callUs');
+    const isMobile = useMediaQuery({ maxWidth: 767 });
+    const [isSubMenuOpen, setIsSubMenuOpen] = React.useState(false);
+
+    const toggleSubMenu = () => {
+        setIsSubMenuOpen(!isSubMenuOpen);
     };
+
+    // const callUs = () => {
+    //     console.log('callUs');
+    // };
     const whatsappUs = () => {
         console.log('whatsappUs');
     };
@@ -62,17 +63,21 @@ function index() {
         console.log('enquiryUs');
     };
     return (
-        <div>
-            <button style={{ ...style.common, ...style.button1 }} onClick={callUs}>
+        <>
+            {/* <button style={{ ...style.common, ...style.button1 }} onClick={callUs}>
                 <i className="fas fa-phone-alt" style={style.icon1}></i>
+            </button> */}
+            <button style={{ ...style.common, ...style.button2 }}>
+                <a href="https://api.whatsapp.com/send?phone=3197010240285" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-whatsapp" style={style.icon2}></i>
+                </a>
             </button>
-            <button style={{ ...style.common, ...style.button2 }} onClick={whatsappUs}>
-                <i className="fab fa-whatsapp" style={style.icon2}></i>
+            <button style={style.button3}>
+                <Link to="contact-us" style={style.btnTitle}>
+                    Enquiry Us
+                </Link>
             </button>
-            <button style={style.button3} onClick={enquiryUs}>
-                <div style={style.btnTitle}>Enquiry Us</div>
-            </button>
-        </div>
+        </>
     );
 }
 

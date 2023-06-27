@@ -363,7 +363,7 @@ function QuestionPage() {
                                                             <div className="searchSuggestions_historyBox__Aah_s">
                                                                 <div>{data.question}</div>
                                                                 <div style={{ color: 'var(--grey600)' }}>
-                                                                    <i class="fas fa-external-link-square-alt"></i>
+                                                                    <i className="fas fa-external-link-square-alt"></i>
                                                                 </div>
                                                             </div>
                                                         </Link>

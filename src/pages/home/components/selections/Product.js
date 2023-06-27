@@ -1,37 +1,39 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+const vline = {
+    borderLeft: '6px solid green',
+    height: '500px',
+    position: 'absolute',
+    left: '50%',
+    //   margineft: -'3px',
+    top: '0'
+};
 
 export default function Product(props) {
     return (
         <div className="card">
-            <div class="single-blog">
-                <div class="blog-image">
-                    <a href="#">
-                        <img src={props.url} width="370" height="200" alt="blog" style={{ objectFit: 'cover' }} />
-                    </a>
+            <div className="single-blog">
+                <div className="blog-image">
+                    <img src={props.url} width="370" height="200" alt="blog" style={{ objectFit: 'cover' }} />
                 </div>
-                <div class="blog-content">
-                    {/* <ul class="meta">
-                        <li>
-                            <a href="#">25 May, 2020</a>
-                        </li>
-                        <li>
-                            <a href="#">By: Alex</a>
-                        </li>
-                        <li>
-                            <a href="#">12 Comments</a>
-                        </li>
-                    </ul> */}
-                    <h4 class="blog-title">
-                        <a href="#" style={{ fontSize: '20px' }}>
-                            {props.name}
-                        </a>
-                    </h4>
-                    <h6 class="blog-title">
-                        <a href="#" style={{ fontSize: '14px' }}>
-                            {props.description}
-                        </a>
-                    </h6>
+                <div className="blog-content">
+                    <div className="blog-title">
+                        <span style={{ fontSize: '20px' }}>{props.name}</span>
+                    </div>
+                    <div className="blog-title">
+                        <span style={{ fontSize: '16px' }}>{props.description}</span>
+                    </div>
+                    <div className="blog-title">
+                        <ul className="d-flex justify-content-around relative">
+                            <li>
+                                <span style={{ fontSize: '14px' }}>Rank : {props.rank}</span>
+                            </li>
+                            <div>|</div>
+                            <li>
+                                <span style={{ fontSize: '14px' }}>Marks : {props.marks}</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

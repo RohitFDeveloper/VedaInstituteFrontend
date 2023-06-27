@@ -1,4 +1,17 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
+import { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
+
+// bootstrap
+import { Button, Modal, Container } from 'react-bootstrap';
+
+// project imports
 import gallery1 from 'assets/images/gallery/gallery-01.webp';
 import gallery2 from 'assets/images/gallery/gallery-02.webp';
 import gallery3 from 'assets/images/gallery/gallery-03.webp';
@@ -13,21 +26,34 @@ import gallery9 from 'assets/images/gallery/gallery-09.webp';
 // const imageUrls = getImagesFromFolder(folderPath);
 
 const gallery = [
-    { img: gallery1 },
-    { img: gallery2 },
-    { img: gallery3 },
-    { img: gallery4 },
-    { img: gallery5 },
-    { img: gallery6 },
-    { img: gallery7 },
-    { img: gallery8 },
-    { img: gallery9 }
+    {
+        original: gallery1,
+        thumbnail: gallery1
+    },
+    {
+        original: gallery2,
+        thumbnail: gallery2
+    },
+    {
+        original: gallery3,
+        thumbnail: gallery3
+    },
+    {
+        original: gallery4,
+        thumbnail: gallery4
+    },
+    {
+        original: gallery5,
+        thumbnail: gallery5
+    },
+    {
+        original: gallery6,
+        thumbnail: gallery6
+    }
 ];
 
 // extra css
 const style = {
-    galleryCont: { padding: '30px 0' },
-    galleryTittle: { paddingTop: '100px' },
     line: {
         width: '150px',
         background: '0 0',
@@ -37,11 +63,30 @@ const style = {
 };
 
 const Index = () => {
+    const isMobile = useMediaQuery({ maxWidth: 767 });
+    const [modalShow, setModalShow] = useState(false);
+    const [imageUrl, setImageUrl] = useState('');
+    function MyVerticallyCenteredModal(props) {
+        return (
+            <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+                <Modal.Body className="p-0">
+                    <ImageGallery items={gallery} />
+                    {/* <Container className="p-0" fluid style={{ display: 'flex', justifyContent: 'center' }}>
+                        <img src={imageUrl} alt="Logo" style={{ width: '100%', height: '100%', borderRadius: '10px' }} />
+                    </Container> */}
+                </Modal.Body>
+            </Modal>
+        );
+    }
+    const openModal = (url) => {
+        setImageUrl(url);
+        setModalShow(true);
+    };
     return (
         <>
-            <section className="">
-                <div className="container">
-                    <div className="text-start" style={style.galleryTittle}>
+            <section>
+                <div className="container mb-2">
+                    <div className="text-start">
                         <h2 className="title">Photos Gallery</h2>
                         <span style={style.line} />
                     </div>
@@ -50,77 +95,27 @@ const Index = () => {
 
             {/* <!--====== Gallery Start ======--> */}
 
-            <div class="gallery-page" style={style.galleryCont}>
-                <div class="container">
-                    <div class="tab-content event-tab-items wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <div class="tab-pane fade show active" id="jee">
-                            <div class="row">
-                                {gallery.map((item, index) => (
-                                    <div class="col-lg-4 col-sm-6" key={index}>
-                                        <div class="single-gallery mt-30">
-                                            <a class="image-popup" href="assets/images/gallery/gallery-01.webp">
-                                                <img src={item.img} width="371" height="257" alt="gallery" />
-                                            </a>
+            <div className="gallery-page p-0">
+                <div className="container">
+                    <PerfectScrollbar options={{ suppressScrollX: true }}>
+                        <div className="row" style={{ maxHeight: '60rem' }}>
+                            {gallery.map((item, index) => (
+                                <div className="col-lg-6 col-sm-6" key={index}>
+                                    <div className="single-gallery mt-30">
+                                        <div
+                                            className="image-container d-flex justify-content-center"
+                                            onClick={() => openModal(item.original)}
+                                        >
+                                            <img src={item.original} width="250" height="230" alt="gallery" />
                                         </div>
                                     </div>
-                                ))}
-                            </div>
+                                </div>
+                            ))}
                         </div>
-                        <div class="tab-pane fade " id="neet">
-                            <div class="row">
-                                {gallery.map((item, index) => (
-                                    <div class="col-lg-4 col-sm-6" key={index}>
-                                        <div class="single-gallery mt-30">
-                                            <a class="image-popup" href="assets/images/gallery/gallery-01.webp">
-                                                <img src={item.img} width="371" height="257" alt="gallery" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div class="tab-pane fade " id="pat">
-                            <div class="row">
-                                {gallery.map((item, index) => (
-                                    <div class="col-lg-4 col-sm-6" key={index}>
-                                        <div class="single-gallery mt-30">
-                                            <a class="image-popup" href="assets/images/gallery/gallery-01.webp">
-                                                <img src={item.img} width="371" height="257" alt="gallery" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div class="tab-pane fade " id="cpat">
-                            <div class="row">
-                                {gallery.map((item, index) => (
-                                    <div class="col-lg-4 col-sm-6" key={index}>
-                                        <div class="single-gallery mt-30">
-                                            <a class="image-popup" href="assets/images/gallery/gallery-01.webp">
-                                                <img src={item.img} width="371" height="257" alt="gallery" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div class="tab-pane fade " id="bhu">
-                            <div class="row">
-                                {gallery.map((item, index) => (
-                                    <div class="col-lg-4 col-sm-6" key={index}>
-                                        <div class="single-gallery mt-30">
-                                            <a class="image-popup" href="assets/images/gallery/gallery-01.webp">
-                                                <img src={item.img} width="371" height="257" alt="gallery" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+                    </PerfectScrollbar>
                 </div>
             </div>
+            <MyVerticallyCenteredModal show={modalShow} onHide={() => setModalShow(false)} />
         </>
     );
 };

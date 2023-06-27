@@ -1,60 +1,75 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
+import coursebgimg from 'assets/images/courses/Upse_img.jpg';
 const subjectData = [
     {
         category: '#science',
         subName: 'Computer Science & Engineering',
         Duration: '4year',
-        Fees: '$550'
+        Fees: '$550',
+        url: 'courses/ssc'
     },
     {
         category: '#science',
         subName: 'Computer Science & Engineering',
         Duration: '4year',
-        Fees: '$550'
+        Fees: '$550',
+        url: 'courses/ssc'
     },
     {
         category: '#science',
         subName: 'Computer Science & Engineering',
         Duration: '4year',
-        Fees: '$550'
+        Fees: '$550',
+        url: 'courses/ssc'
     },
     {
         category: '#science',
         subName: 'Computer Science & Engineering',
         Duration: '4year',
-        Fees: '$550'
+        Fees: '$550',
+        url: 'courses/ssc'
     },
     {
         category: '#science',
         subName: 'Computer Science & Engineering',
         Duration: '4year',
-        Fees: '$550'
+        Fees: '$550',
+        url: 'courses/ssc'
     },
     {
         category: '#science',
         subName: 'Computer Science & Engineering',
         Duration: '4year',
-        Fees: '$550'
+        Fees: '$550',
+        url: 'courses/ssc'
     },
     {
         category: '#science',
         subName: 'Computer Science & Engineering',
         Duration: '4year',
-        Fees: '$550'
+        Fees: '$550',
+        url: 'courses/ssc'
     },
     {
         category: '#science',
         subName: 'Computer Science & Engineering',
         Duration: '4year',
-        Fees: '$550'
+        Fees: '$550',
+        url: 'courses/ssc'
     }
 ];
 
 // extra css
 const style = {
     border: {
-        borderRadius: '6px'
+        borderRadius: '6px',
+        backgroundImage: ` url(${coursebgimg})`,
+        position: 'relative',
+        zIndex: '0',
+        backgroundSize: '100%',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center'
     }
 };
 
@@ -78,14 +93,12 @@ function Courses() {
                             {subjectData.map((item, index) => (
                                 <div className="col-lg-3 col-sm-6 courses-col" key={index}>
                                     <div
-                                        className="single-courses mt-30 wow fadeInUpBig"
+                                        className="single-courses mt-30 wow fadeInUpBig card-courses"
                                         data-wow-duration="1s"
                                         data-wow-delay="0.2s"
                                         style={style.border}
                                     >
-                                        <a href="#" className="category">
-                                            {item.category}
-                                        </a>
+                                        <div className="category">{item.category}</div>
                                         <h4 className="courses-title">
                                             <a href="#">{item.subName}</a>
                                         </h4>
@@ -97,23 +110,13 @@ function Courses() {
                                                 Fee: <span> {item.Fees}</span>
                                             </p>
                                         </div>
-                                        <div className="rating">
-                                            <span>Rating: </span>
-                                            <ul className="star">
-                                                {['1', '2', '3,', '4', '5'].map((item, index) => (
-                                                    <li key={index}>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
                                         <div className="courses-link">
-                                            <a className="apply" href="#">
+                                            <Link className="apply" to={item.url}>
                                                 Online Apply
-                                            </a>
-                                            <a className="more" href="#">
+                                            </Link>
+                                            <Link className="more" to={item.url}>
                                                 Read more <i className="fas fa-chevron-right"></i>
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

@@ -4,8 +4,14 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
-// others
+// third party
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Marquee from 'react-fast-marquee';
+import axios from 'axios';
+
+// project others
+import envVariables from 'environment.js';
 
 // const data
 import vedaInfo from 'vedaInfo';
@@ -23,45 +29,68 @@ const contactData = [
     {
         title: vedaInfo.contactInfo.contactNo1,
         icon: 'fas fa-phone',
-        url: '/contact',
+        url: '/contact-us',
         blink: true
     },
     {
         title: vedaInfo.contactInfo.emailId1,
         icon: 'fas fa-globe-africa',
-        url: '/email',
+        url: '/contact-us',
         blink: false
     }
 ];
 
 function Index() {
     const isMobile = useMediaQuery({ maxWidth: 767 });
-    const [AdsMsg, setAdsMsg] = useState(advertiseMsg);
+    const [AdsMsg, setAdsMsg] = useState([]);
     const [ContactInfo, setContactInfo] = useState(contactData);
+    async function fetchNotifications() {
+        await axios
+            .get(`${envVariables.baseURL}api/top-header-info-list`)
+            .then((res) => {
+                console.log(res.data.data);
+                setAdsMsg(res.data.data);
+            })
+            .catch((error) => {
+                toast.error('Something went wrong with notifications!', {
+                    theme: 'colored',
+                    style: {
+                        color: '#fff',
+                        background: 'var(--errorMain)'
+                    }
+                });
+            });
+    }
+    useEffect(() => {
+        fetchNotifications();
+    }, []);
     return (
         <>
+            <ToastContainer />
             <div className="header-top">
-                <div className="container">
+                <div className="container-fluid">
                     <div className="header-top-wrapper d-flex flex-wrap justify-content-sm-between">
                         <div className="header-top-left mt-10">
                             <ul className="header-meta" style={{ width: !isMobile ? '600px' : '100%', color: '#fff' }}>
                                 <li>
                                     <Marquee>
                                         <div className="d-flex flex-row">
-                                            {AdsMsg.map((data, index) => {
-                                                return (
-                                                    <>
-                                                        <div
-                                                            className={data.blink ? 'px-2 blink' : 'px-2'}
-                                                            style={{ color: data.blink ? 'var(--ternaryLight)' : null }}
-                                                            key={index}
-                                                        >
-                                                            {data.msg}
-                                                        </div>
-                                                        <span className="px-4">|</span>
-                                                    </>
-                                                );
-                                            })}
+                                            {AdsMsg.length > 0
+                                                ? AdsMsg.map((data, index) => {
+                                                      return (
+                                                          <>
+                                                              <div
+                                                                  className={data.is_highlighted == 1 ? 'px-2 blink' : 'px-2'}
+                                                                  style={{ color: data.is_highlighted == 1 ? 'var(--ternaryLight)' : null }}
+                                                                  key={index}
+                                                              >
+                                                                  {data.title}
+                                                              </div>
+                                                              <span className="px-4">|</span>
+                                                          </>
+                                                      );
+                                                  })
+                                                : null}
                                         </div>
                                     </Marquee>
                                 </li>

@@ -32,7 +32,7 @@ function Index() {
             </div>
 
             {/* info and contact components */}
-            <Poster />
+            {/* <Poster /> */}
             <ContactIcons />
             <ScrollTop />
         </>

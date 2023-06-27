@@ -1,6 +1,6 @@
 const envVariables = {
     // start for testing purpose
-    baseURL: ''
+    baseURL: 'http://localhost/coaching/public/'
     // end for testing purpose
 };
 

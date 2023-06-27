@@ -15,6 +15,14 @@ import LoginBg from 'assets/images/page-banner.webp';
 const style = {
     error: {
         color: 'var(--errorMain)'
+    },
+    contactBox: {
+        padding: '20px 0',
+        borderRadius: '5px',
+        boxSizing: 'border-box',
+        margin: '0 5px',
+        boxShadow:
+            'rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset'
     }
 };
 
@@ -73,54 +81,58 @@ const Index = () => {
 
             {/* <!--====== Contact Start ======--> */}
 
-            <section className="contact-area">
+            <section className="contact-area" style={{ padding: '110px 0' }}>
                 <div className="container">
-                    <div className="row">
+                    <div className="row" style={style.contactBox}>
                         <div className="col-md-4">
-                            <div className="single-contact-info mt-30">
-                                <div className="info-icon">
-                                    <i className="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div className="info-content">
-                                    <h5 className="title">Address</h5>
-                                    <p>297 Central Street, New Town North City, New York, USA</p>
+                            <div className="contact">
+                                <div className="single-contact-info">
+                                    <div className="info-icon">
+                                        <i className="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div className="info-content">
+                                        <h5 className="title">Address</h5>
+                                        <p>297 Central Street, New Town North City, New York, USA</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <div className="single-contact-info mt-30">
-                                <div className="info-icon">
-                                    <i className="fas fa-phone"></i>
-                                </div>
-                                <div className="info-content">
-                                    <h5 className="title">Phone</h5>
-                                    <p>
-                                        <a href="tel:+62548254658">+62548 254 658</a>
-                                    </p>
-                                    <p>
-                                        <a href="tel:+99875587478">+99875 587 478</a>
-                                    </p>
+                            <div className="contact ">
+                                <div className="single-contact-info">
+                                    <div className="info-icon">
+                                        <i className="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div className="info-content">
+                                        <h5 className="title">Phone</h5>
+                                        <p>
+                                            <a href="tel:+62548254658">+62548 254 658</a>
+                                            <span> &nbsp; , &nbsp;&nbsp;</span>
+                                            <a href="tel:+99875587478">+99875 587 478</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <div className="single-contact-info mt-30">
-                                <div className="info-icon">
-                                    <i className="fas fa-globe-africa"></i>
-                                </div>
-                                <div className="info-content">
-                                    <h5 className="title">Web</h5>
-                                    <p>
-                                        <a href="mailto://info@example.com">info@example.com</a>
-                                    </p>
-                                    <p>
-                                        <a href="www.example.html">www.example.com</a>
-                                    </p>
+                            <div className="contact">
+                                <div className="single-contact-info">
+                                    <div className="info-icon">
+                                        <i className="fas fa-globe-africa"></i>
+                                    </div>
+                                    <div className="info-content">
+                                        <h5 className="title">Web</h5>
+                                        <p>
+                                            <a href="mailto://info@example.com">info@example.com</a>
+                                            <span> &nbsp; , &nbsp;&nbsp;</span>
+                                            <a href="www.example.html">www.example.com</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="contact-form">
+                    <div className="contact-form" style={{ boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 4px' }}>
                         <div className="row justify-content-center">
                             <div className="col-lg-8">
                                 <div className="contact-title text-center">

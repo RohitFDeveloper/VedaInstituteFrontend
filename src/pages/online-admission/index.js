@@ -35,11 +35,8 @@ const Index = () => {
                 .max(10)
                 .matches(phoneRegExp, 'Contact number is not valid')
                 .required('Contact number is required'),
-            address: Yup.string().required('address is required*').min(10, 'Your address is too short , please fill full address.'),
-            school: Yup.string().required('school is required*').min(10, 'fill full name of school / college.'),
-            confirmPassword: Yup.string()
-                .required('Password is required*')
-                .oneOf([Yup.ref('password'), null], 'Passwords must match')
+            address: Yup.string().required('Address is required*').min(10, 'Your address is too short , please fill full address.'),
+            school: Yup.string().required('School/College is required*').min(10, 'fill full name of school / college.')
         }),
         onSubmit: (values, { resetForm }) => {
             console.log(values);
@@ -61,26 +58,26 @@ const Index = () => {
 
     return (
         <>
-            <section class="page-banner">
-                <div class="page-banner-bg bg_cover" style={{ backgroundImage: `url(${LoginBg})` }}>
-                    <div class="container">
-                        <div class="banner-content text-center">
-                            <h2 class="title">Admission</h2>
+            <section className="page-banner">
+                <div className="page-banner-bg bg_cover" style={{ backgroundImage: `url(${LoginBg})` }}>
+                    <div className="container">
+                        <div className="banner-content text-center">
+                            <h2 className="title">Admission</h2>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="login-register">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="login-register-content">
-                                <h4 class="title">Admission Form</h4>
+            <section className="login-register">
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-8">
+                            <div className="login-register-content">
+                                <h4 className="title">Admission Form</h4>
 
-                                <div class="login-register-form">
+                                <div className="login-register-form">
                                     <form onSubmit={formik.handleSubmit} className="form-check">
                                         <div style={style.nameCont} className="row">
-                                            <div class="single-form col">
+                                            <div className="single-form col">
                                                 <label htmlFor="firstname">First Name</label>
                                                 <input
                                                     type="text"
@@ -95,7 +92,7 @@ const Index = () => {
                                                 ) : null}
                                             </div>
 
-                                            <div class="single-form col">
+                                            <div className="single-form col">
                                                 <label htmlFor="lastname">Last Name</label>
                                                 <input
                                                     type="text"
@@ -111,7 +108,7 @@ const Index = () => {
                                             </div>
                                         </div>
                                         <div style={style.nameCont} className="row">
-                                            <div class="single-form col">
+                                            <div className="single-form col">
                                                 <label htmlFor="email">Date of Birth</label>
                                                 <input
                                                     type="date"
@@ -125,22 +122,22 @@ const Index = () => {
                                                     <div style={style.error}>{formik.errors.DOB}</div>
                                                 ) : null}
                                             </div>
-                                            <div class="single-form col">
+                                            <div className="single-form col">
                                                 <label htmlFor="email">Gender</label>
                                                 <div className="d-flex align-items-center py-2">
                                                     <input type="radio" id="date" name="date" style={{ height: '16px' }} />
-                                                    <label class="form-check-label px-3" for="flexRadioDefault1">
+                                                    <label className="form-check-label px-3" for="flexRadioDefault1">
                                                         Male
                                                     </label>
                                                     <input type="radio" id="date" name="date" style={{ height: '16px' }} />
-                                                    <label class="form-check-label px-3" for="flexRadioDefault1">
+                                                    <label className="form-check-label px-3" for="flexRadioDefault1">
                                                         Female
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div style={style.nameCont} className="row">
-                                            <div class="single-form col">
+                                            <div className="single-form col">
                                                 <label htmlFor="email">Email</label>
                                                 <input
                                                     type="email"
@@ -154,7 +151,7 @@ const Index = () => {
                                                     <div style={style.error}>{formik.errors.email}</div>
                                                 ) : null}
                                             </div>
-                                            <div class="single-form col">
+                                            <div className="single-form col">
                                                 <label htmlFor="contact">Phone</label>
                                                 <input
                                                     type="text"
@@ -170,26 +167,26 @@ const Index = () => {
                                             </div>
                                         </div>
                                         <div style={style.nameCont} className="row">
-                                            <div class="single-form col">
+                                            <div className="single-form col">
                                                 <label htmlFor="fahterName">Fahter Name</label>
                                                 <input type="text" id="fahterName" name="fahterName" />
                                             </div>
-                                            <div class="single-form col">
+                                            <div className="single-form col">
                                                 <label htmlFor="motherName">Mother Name</label>
                                                 <input type="text" id="motherName" name="motherName" />
                                             </div>
                                         </div>
                                         <div style={style.nameCont} className="row">
-                                            <div class="single-form col">
+                                            <div className="single-form col">
                                                 <label htmlFor="state">State</label>
                                                 <input type="text" id="state" name="state" />
                                             </div>
-                                            <div class="single-form col">
+                                            <div className="single-form col">
                                                 <label htmlFor="city">City</label>
                                                 <input type="text" id="city" name="city" />
                                             </div>
                                         </div>
-                                        <div class="single-form">
+                                        <div className="single-form">
                                             <label htmlFor="address">Address</label>
                                             <input
                                                 type="text"
@@ -205,9 +202,9 @@ const Index = () => {
                                         </div>
                                         <br />
                                         <div>
-                                            <h6 class="title">Education Details</h6>
+                                            <h6 className="title">Education Details</h6>
                                         </div>
-                                        <div class="single-form">
+                                        <div className="single-form">
                                             <label htmlFor="highSchool">Name of School / College</label>
                                             <input
                                                 type="text"
@@ -222,7 +219,7 @@ const Index = () => {
                                             ) : null}
                                         </div>
                                         <div style={style.nameCont} className="row">
-                                            <div class="single-form col">
+                                            <div className="single-form col">
                                                 <Form.Select aria-label="Class" style={{ lineHeight: '2.5' }}>
                                                     <option>Class</option>
                                                     {['6th - 8th', '9th - 10th', '11th - 12th', 'Under Graduate', 'Post Graduate'].map(
@@ -232,7 +229,7 @@ const Index = () => {
                                                     )}
                                                 </Form.Select>
                                             </div>
-                                            <div class="single-form col">
+                                            <div className="single-form col">
                                                 <Form.Select aria-label="Medium" style={{ lineHeight: '2.5' }}>
                                                     <option>Medium</option>
                                                     <option value="1">Hindi</option>
@@ -241,25 +238,18 @@ const Index = () => {
                                                 </Form.Select>
                                             </div>
                                         </div>
-                                        <div class="single-form">
-                                            <div class="checkbox">
+                                        <div className="single-form">
+                                            <div className="checkbox">
                                                 <input type="checkbox" id="remember" />
                                                 <label for="remember">
                                                     <span></span>Receive Information Are True
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="single-form">
-                                            <button class="main-btn" type="submit">
-                                                Register
+                                        <div className="single-form">
+                                            <button className="main-btn" type="submit">
+                                                Submit
                                             </button>
-                                        </div>
-
-                                        <div class="single-form">
-                                            <label>Already have an account?</label>
-                                            <Link to="/login" class="main-btn main-btn-2">
-                                                Log in instead!
-                                            </Link>
                                         </div>
                                     </form>
                                 </div>

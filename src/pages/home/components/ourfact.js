@@ -12,7 +12,7 @@ const Ourfact = () => {
                                 <div className="single-counter mt-30 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.2s">
                                     <span className="counter-count">
                                         <span className="count" data-count="3652">
-                                            0
+                                            1000
                                         </span>{' '}
                                         +
                                     </span>
@@ -23,7 +23,7 @@ const Ourfact = () => {
                                 <div className="single-counter mt-30 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.4s">
                                     <span className="counter-count">
                                         <span className="count" data-count="105">
-                                            0
+                                            99
                                         </span>{' '}
                                         +
                                     </span>
@@ -34,7 +34,7 @@ const Ourfact = () => {
                                 <div className="single-counter mt-30 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.6s">
                                     <span className="counter-count">
                                         <span className="count" data-count="120">
-                                            0
+                                            24
                                         </span>{' '}
                                         +
                                     </span>
@@ -45,7 +45,7 @@ const Ourfact = () => {
                                 <div className="single-counter mt-30 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.8s">
                                     <span className="counter-count">
                                         <span className="count" data-count="30">
-                                            0
+                                            50
                                         </span>{' '}
                                         +
                                     </span>

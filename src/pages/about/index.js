@@ -167,14 +167,40 @@ const Index = () => {
                 </div>
             </div>
 
+            {/* <!--====== About Director Start ======--> */}
+            <section className="about-area">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="about-content mt-40">
+                                <h2 className="about-title">
+                                    About <span>Director</span>
+                                </h2>
+                                <span className="line"></span>
+                                <p>
+                                    Even slightly believable. If you are going use passage of Lorem Ipsum need desire to obtain pain of
+                                    itself, because it is pain de sires many pain of itself occur for your study <br /> <br /> Even slightly
+                                    believable. If you are going use passage of Lorem Ipsum need desir
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="about-image mt-50">
+                                <img src={aboutUs} alt="about" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* <!--====== Mission Start ======--> */}
 
-            <section class="about_mission">
-                <div class="container">
-                    <div class="row">
+            <section className="about_mission pt-0">
+                <div className="container">
+                    <div className="row">
                         {missionCard.map((item, index) => (
-                            <div class="col-lg-4">
-                                <div class="mission_detail">
+                            <div className="col-lg-4">
+                                <div className="mission_detail">
                                     <h4>{item.heading}</h4>
                                     <p>{item.content}</p>
                                 </div>
@@ -186,15 +212,15 @@ const Index = () => {
 
             {/* <!--====== Counter Start  ======--> */}
 
-            {/* <Ourfact /> */}
-            <div class="counter-area-2">
-                <div class="container">
-                    <div class="counter-wrapper-2 bg_cover" style={{ backgroundImage: `url(${countImg})` }}>
-                        <div class="row">
-                            <div class="col-sm-3 col-6 counter-col">
-                                <div class="single-counter mt-30">
-                                    <span class="counter-count">
-                                        <span class="count" data-count="3652">
+            <Ourfact />
+            {/* <div className="counter-area-2">
+                <div className="container">
+                    <div className="counter-wrapper-2 bg_cover" style={{ backgroundImage: `url(${countImg})` }}>
+                        <div className="row">
+                            <div className="col-sm-3 col-6 counter-col">
+                                <div className="single-counter mt-30">
+                                    <span className="counter-count">
+                                        <span className="count" data-count="3652">
                                             0
                                         </span>{' '}
                                         +
@@ -202,10 +228,10 @@ const Index = () => {
                                     <p>Students</p>
                                 </div>
                             </div>
-                            <div class="col-sm-3 col-6 counter-col">
-                                <div class="single-counter mt-30">
-                                    <span class="counter-count">
-                                        <span class="count" data-count="105">
+                            <div className="col-sm-3 col-6 counter-col">
+                                <div className="single-counter mt-30">
+                                    <span className="counter-count">
+                                        <span className="count" data-count="105">
                                             0
                                         </span>{' '}
                                         +
@@ -213,10 +239,10 @@ const Index = () => {
                                     <p>Faculties</p>
                                 </div>
                             </div>
-                            <div class="col-sm-3 col-6 counter-col">
-                                <div class="single-counter mt-30">
-                                    <span class="counter-count">
-                                        <span class="count" data-count="120">
+                            <div className="col-sm-3 col-6 counter-col">
+                                <div className="single-counter mt-30">
+                                    <span className="counter-count">
+                                        <span className="count" data-count="120">
                                             0
                                         </span>{' '}
                                         +
@@ -224,10 +250,10 @@ const Index = () => {
                                     <p>Branches</p>
                                 </div>
                             </div>
-                            <div class="col-sm-3 col-6 counter-col">
-                                <div class="single-counter mt-30">
-                                    <span class="counter-count">
-                                        <span class="count" data-count="30">
+                            <div className="col-sm-3 col-6 counter-col">
+                                <div className="single-counter mt-30">
+                                    <span className="counter-count">
+                                        <span className="count" data-count="30">
                                             0
                                         </span>{' '}
                                         +
@@ -238,11 +264,31 @@ const Index = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
+
+            {/* <!--====== Why choose Us Start ======--> */}
+            <section className="choose-us" style={{ backgroundColor: '#f0f8ff', padding: '75px 0' }}>
+                <div className="container">
+                    <div className="row justify-content-center p-2">
+                        <div className="col-lg-12 col-md-12">
+                            <div className="section-title-2 text-center ">
+                                <h2 className="title">Why Veda Institute comes</h2>
+                                <span className="line"></span>
+                                <p style={{ color: '#010101', textAlign: 'justify' }}>
+                                    Even slightly believable. If you are going use a passage of Lorem Ipsum need some Lorem ipsum dolor sit
+                                    amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione
+                                    temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore
+                                    doloribus!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* <!--====== Teachers Start ======--> */}
 
-            <section className="teachers-area" style={{ padding: '110px 0px ' }}>
+            <section className="teachers-area" style={{ padding: '75px 0px ' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8">

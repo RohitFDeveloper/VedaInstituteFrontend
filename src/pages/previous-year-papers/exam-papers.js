@@ -137,61 +137,59 @@ const ExamPapers = () => {
                     </div>
 
                     <div className="container">
-                        <div className="row">
-                            {demoPapers.map((data, index) => {
-                                return (
-                                    <Card key={index} className="my-2">
-                                        {/* <CardHeader>header</CardHeader> */}
-                                        <Card.Body style={style.cardBody}>
-                                            <div>
-                                                <Card.Title className={isMobile ? 'h6' : 'h5'}>
-                                                    {data.title +
-                                                        ', ' +
-                                                        'Held On: ' +
-                                                        data.scheduled +
-                                                        ', ' +
-                                                        data.shift +
-                                                        ', ' +
-                                                        data.tier}
-                                                </Card.Title>
-                                                <ListGroup style={style.listGroup}>
-                                                    <ListGroupItem style={style.listGroupItem}>
-                                                        <i className="fas fa-question-circle"></i>
-                                                        <span style={{ paddingLeft: '6px' }}>{data.questions + ' ' + 'Questions'}</span>
-                                                    </ListGroupItem>
-                                                    <ListGroupItem style={style.listGroupItem}>
-                                                        <i className="fas fa-marker"></i>
-                                                        <span style={{ paddingLeft: '6px' }}>{data.marks + ' ' + 'Marks'}</span>
-                                                    </ListGroupItem>
-                                                    <ListGroupItem style={style.listGroupItem}>
-                                                        <i className="fas fa-history"></i>
-                                                        <span style={{ paddingLeft: '6px' }}>{data.time}</span>
-                                                    </ListGroupItem>
-                                                </ListGroup>
-                                            </div>
-                                            <div className="button" style={style.buttonCon}>
-                                                <a href={data.pdfUrl} download={true}>
-                                                    <Button className="normalBtn" size="sm">
-                                                        Download
-                                                    </Button>
-                                                </a>
+                        <div style={{ padding: '1rem 2rem', boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 4px' }}>
+                            <div className="row">
+                                {demoPapers.map((data, index) => {
+                                    return (
+                                        <div className="col-lg-12 col-sm-12 m-2" style={{ boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 4px' }}>
+                                            <div key={index} className="my-2">
+                                                <div style={style.cardBody}>
+                                                    <div>
+                                                        <div className={isMobile ? 'h6' : 'h5'}>
+                                                            {data.title}, Held On: ${data.scheduled}, ${data.shift}, ${data.tier}
+                                                        </div>
+                                                        <ListGroup style={style.listGroup}>
+                                                            <ListGroupItem style={style.listGroupItem}>
+                                                                <i className="fas fa-question-circle"></i>
+                                                                <span style={{ paddingLeft: '6px' }}>
+                                                                    {data.questions + ' ' + 'Questions'}
+                                                                </span>
+                                                            </ListGroupItem>
+                                                            <ListGroupItem style={style.listGroupItem}>
+                                                                <i className="fas fa-marker"></i>
+                                                                <span style={{ paddingLeft: '6px' }}>{data.marks + ' ' + 'Marks'}</span>
+                                                            </ListGroupItem>
+                                                            <ListGroupItem style={style.listGroupItem}>
+                                                                <i className="fas fa-history"></i>
+                                                                <span style={{ paddingLeft: '6px' }}>{data.time}</span>
+                                                            </ListGroupItem>
+                                                        </ListGroup>
+                                                    </div>
+                                                    <div className="button" style={style.buttonCon}>
+                                                        <a href={data.pdfUrl} download={true}>
+                                                            <Button className="normalBtn" size="sm">
+                                                                Download
+                                                            </Button>
+                                                        </a>
 
-                                                <Button
-                                                    variant="outline-dark"
-                                                    className="btnDark"
-                                                    size="sm"
-                                                    onClick={() => showPaper(data.pdfUrl)}
-                                                >
-                                                    View
-                                                </Button>
+                                                        <Button
+                                                            variant="outline-dark"
+                                                            className="btnDark"
+                                                            size="sm"
+                                                            onClick={() => showPaper(data.pdfUrl)}
+                                                        >
+                                                            View
+                                                        </Button>
+                                                    </div>
+                                                </div>
+                                                <div style={{ padding: '8px 24px', color: 'var(--primaryMain)' }}>
+                                                    <i className="fas fa-language p-1"></i> Available In - {data.language}
+                                                </div>
                                             </div>
-                                        </Card.Body>
-                                        <CardFooter style={{ padding: '8px 24px', color: 'var(--primaryMain)' }}>
-                                            <i className="fas fa-language p-1"></i> Available In - {data.language}
-                                        </CardFooter>
-                                    </Card>
-                                );
-                            })}
+                                        </div>
+                                    );
+                                })}
+                            </div>
                         </div>
                     </div>
                 </div>

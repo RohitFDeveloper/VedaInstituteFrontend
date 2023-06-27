@@ -16,7 +16,7 @@ function Index({ ...props }) {
             <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
                 <Modal.Header closeButton></Modal.Header>
                 <Modal.Body>
-                    <Container fulid style={{ display: 'flex', justifyContent: 'center' }}>
+                    <Container fluid style={{ display: 'flex', justifyContent: 'center' }}>
                         {isMobile ? (
                             <img src={logo} width={props.width} height={props.height} alt="Logo" style={{ objectFit: 'cover' }} />
                         ) : (

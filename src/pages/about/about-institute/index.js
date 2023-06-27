@@ -40,23 +40,23 @@ const Index = () => {
 
             {/* <!--====== Campus Visit Start ======--> */}
 
-            <section class="campus-visit-area-3" style={{ padding: '110px 0px ' }}>
-                <div class="container">
-                    <div class="campus-visit-wrapper">
-                        <div class="campus-content-col">
-                            <div class="campus-content">
-                                <h2 class="campus-title">Visit our Campus with image gallery</h2>
-                                <span class="line"></span>
+            <section className="campus-visit-area-3" style={{ padding: '110px 0px ' }}>
+                <div className="container">
+                    <div className="campus-visit-wrapper">
+                        <div className="campus-content-col">
+                            <div className="campus-content">
+                                <h2 className="campus-title">Visit our Campus with image gallery</h2>
+                                <span className="line"></span>
                                 <p>Even slightly believable. If you are going use a passage of Lorem Ipsum need</p>
-                                <h3 class="video-title">or watch video</h3>
-                                <a class="play video-popup" href="https://www.youtube.com/watch?v=0qHWub21h5c">
-                                    <i class="fas fa-play"></i> <span>Play now</span>
+                                <h3 className="video-title">or watch video</h3>
+                                <a className="play video-popup" href="https://www.youtube.com/watch?v=0qHWub21h5c">
+                                    <i className="fas fa-play"></i> <span>Play now</span>
                                 </a>
                             </div>
                         </div>
-                        <div class="campus-image-col">
-                            <div class="campus-image">
-                                <div class="single-campus">
+                        <div className="campus-image-col">
+                            <div className="campus-image">
+                                <div className="single-campus">
                                     <img src={aboutCampus} width="585" height="392" alt="Campus" />
                                 </div>
                             </div>

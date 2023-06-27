@@ -1,0 +1,648 @@
+{"questionsList1":[
+    {
+        "_id": "6432ea53980aeeef167e2b19",
+        "question": "<p><span style=\"color: rgb(0,0,0);\"><strong>Indentify Subject :</strong></span></p>\n<p><span style=\"color: rgb(0,0,0);\">This is a duster.</span></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "This",
+                "selected": true,
+                "optionType": "normal",
+                "_id": "6433a102980aeeef167e2d32"
+            },
+            {
+                "optionId": 2,
+                "value": "is",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433a102980aeeef167e2d33"
+            },
+            {
+                "optionId": 3,
+                "value": "a",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433a102980aeeef167e2d34"
+            },
+            {
+                "optionId": 4,
+                "value": "duster",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433a102980aeeef167e2d35"
+            }
+        ],
+        "answer": 1,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-09T16:39:47.107Z",
+        "updatedAt": "2023-04-10T05:39:14.720Z",
+        "__v": 0
+    },
+    {
+        "_id": "6432eb13980aeeef167e2b20",
+        "question": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-family: Roboto, sans-serif;\"><strong>Convert the below sentence into introgative sentence</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-family: Roboto, sans-serif;\">Indore is a beautiful place.</span></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "Indore is not a beautiful city.",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6432eb13980aeeef167e2b21"
+            },
+            {
+                "optionId": 2,
+                "value": "Is Indore a beautiful city?",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6432eb13980aeeef167e2b22"
+            },
+            {
+                "optionId": 3,
+                "value": "Is the beautiful city Indore?",
+                "selected": true,
+                "optionType": "normal",
+                "_id": "6432eb13980aeeef167e2b23"
+            }
+        ],
+        "answer": 2,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-09T16:42:59.616Z",
+        "updatedAt": "2023-04-09T16:42:59.616Z",
+        "__v": 0
+    },
+    {
+        "_id": "6432ec3f980aeeef167e2b26",
+        "question": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-family: Roboto, sans-serif;\"><strong>Translate the below sentence into English:</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-family: Roboto, sans-serif;\"><strong>मेरा नाम अंकित वर्मा हैं ।</strong></span>&nbsp;</p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "My name is Ankit.",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6432ec3f980aeeef167e2b27"
+            },
+            {
+                "optionId": 2,
+                "value": "My name is Ankit Verma.",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6432ec3f980aeeef167e2b28"
+            }
+        ],
+        "answer": 2,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-09T16:47:59.656Z",
+        "updatedAt": "2023-04-09T16:47:59.656Z",
+        "__v": 0
+    },
+    {
+        "_id": "64330327980aeeef167e2c20",
+        "question": "<p><span style=\"color: rgb(0,0,0);\"><strong>Choose the correct option for the given picture -</strong></span></p>\n<p></p>\n<img src=\"https://nabhdlm.s3.us-east-2.amazonaws.com/testNabhdlm/0lUD38I492023115539PMimage.png\" alt=\"undefined\" style=\"width: 150px; height: 150px;\">\n<p></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "He is reading a book.",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64330327980aeeef167e2c21"
+            },
+            {
+                "optionId": 2,
+                "value": "He is dancing.",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64330327980aeeef167e2c22"
+            },
+            {
+                "optionId": 3,
+                "value": "He is playing.",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64330327980aeeef167e2c23"
+            }
+        ],
+        "answer": 1,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-09T18:25:43.671Z",
+        "updatedAt": "2023-04-09T18:25:43.671Z",
+        "__v": 0
+    },
+    {
+        "_id": "6433041d980aeeef167e2c48",
+        "question": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-family: Roboto, sans-serif;\"><strong>निम्न लिखित शब्दो को मिलाइये और लिखिए</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-family: Roboto, sans-serif;\"><strong>द + ऊ</strong></span><span style=\"color: rgb(0,0,0);\"> </span></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "दू",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433041d980aeeef167e2c49"
+            },
+            {
+                "optionId": 2,
+                "value": "दु",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433041d980aeeef167e2c4a"
+            },
+            {
+                "optionId": 3,
+                "value": "दा",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433041d980aeeef167e2c4b"
+            }
+        ],
+        "answer": 1,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-09T18:29:49.938Z",
+        "updatedAt": "2023-04-09T18:29:49.938Z",
+        "__v": 0
+    },
+    {
+        "_id": "64330570980aeeef167e2c52",
+        "question": "<p style=\"text-align:start;\"><span style=\"color: rgb(184,49,47);background-color: rgb(255,255,255);font-size: 14px;font-family: Roboto, sans-serif;\"><strong>शब्दों को जोड़े और वाक्य बनाए</strong></span><span style=\"color: rgb(184,49,47);\"> </span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 16px;font-family: Roboto, sans-serif;\"><strong><em>रंग , है , सफ़ेद , प्रतीक , का , शांति |</em></strong></span><span style=\"font-size: 16px;\"><em> </em></span></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "सफ़ेद रंग शांती का प्रतीक है |",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64330570980aeeef167e2c53"
+            },
+            {
+                "optionId": 2,
+                "value": "शांती का प्रतीक है सफ़ेद रंग |",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64330570980aeeef167e2c54"
+            }
+        ],
+        "answer": 1,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-09T18:35:28.746Z",
+        "updatedAt": "2023-04-09T18:35:28.746Z",
+        "__v": 0
+    },
+    {
+        "_id": "6433066f980aeeef167e2c59",
+        "question": "<p><span style=\"color: rgb(0,0,0);font-size: 18px;\"><strong>Select the correct name of organ -</strong></span></p>\n<div style=\"text-align:left;\"><img src=\"https://nabhdlm.s3.us-east-2.amazonaws.com/testNabhdlm/8KkUs6p4102023120940AMimage.jpeg\" alt=\"undefined\" style=\"width: 150px; height: 150px;\"></div>\n<p></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "Liver",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433066f980aeeef167e2c5a"
+            },
+            {
+                "optionId": 2,
+                "value": "Heart",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433066f980aeeef167e2c5b"
+            },
+            {
+                "optionId": 3,
+                "value": "Stomach",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433066f980aeeef167e2c5c"
+            }
+        ],
+        "answer": 1,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-09T18:39:43.365Z",
+        "updatedAt": "2023-04-09T18:39:43.365Z",
+        "__v": 0
+    },
+    {
+        "_id": "6433076f980aeeef167e2c61",
+        "question": "<p><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-family: Roboto, sans-serif;\"><strong>Unscramble the underlined body part with the help of the given picture -</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Roboto, sans-serif;\"><strong><em><ins>ringef</ins></em></strong></span></p>\n<p></p>\n<div style=\"text-align:left;\"><img src=\"https://nabhdlm.s3.us-east-2.amazonaws.com/testNabhdlm/xTGoLtu4102023121356AMimage.png\" alt=\"undefined\" style=\"width: 150px; height: 150px;\"></div>\n<p></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "Rinfeg",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433076f980aeeef167e2c62"
+            },
+            {
+                "optionId": 2,
+                "value": "Finger",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433076f980aeeef167e2c63"
+            }
+        ],
+        "answer": 2,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-09T18:43:59.626Z",
+        "updatedAt": "2023-04-09T18:43:59.626Z",
+        "__v": 0
+    },
+    {
+        "_id": "64330a10980aeeef167e2c84",
+        "question": "<p><span style=\"color: rgb(97,97,97);background-color: rgb(255,255,255);font-size: 14px;font-family: Roboto, sans-serif;\">\\text{Add the fractions } \\frac{2}{4} + \\frac{2}{4}</span></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "1",
+                "selected": false,
+                "optionType": "mathematical",
+                "_id": "64330a10980aeeef167e2c85"
+            },
+            {
+                "optionId": 2,
+                "value": "2",
+                "selected": false,
+                "optionType": "mathematical",
+                "_id": "64330a10980aeeef167e2c86"
+            },
+            {
+                "optionId": 3,
+                "value": "\\frac{2}{4}",
+                "selected": false,
+                "optionType": "mathematical",
+                "_id": "64330a10980aeeef167e2c87"
+            }
+        ],
+        "answer": 1,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-09T18:55:12.358Z",
+        "updatedAt": "2023-04-09T18:55:12.358Z",
+        "__v": 0
+    }
+],
+"questionsList2":[
+    {
+        "_id": "64330bd8980aeeef167e2cc5",
+        "question": "<p><span style=\"color: rgb(0,0,0);\"><strong>What be will the value of 15</strong><sup><strong>2</strong></sup></span></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "100",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64330bd8980aeeef167e2cc6"
+            },
+            {
+                "optionId": 2,
+                "value": "169",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64330bd8980aeeef167e2cc7"
+            },
+            {
+                "optionId": 3,
+                "value": "225",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64330bd8980aeeef167e2cc8"
+            },
+            {
+                "optionId": 4,
+                "value": "256",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64330bd8980aeeef167e2cc9"
+            }
+        ],
+        "answer": 3,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-09T19:02:48.315Z",
+        "updatedAt": "2023-04-09T19:02:48.315Z",
+        "__v": 0
+    },
+    {
+        "_id": "64339ae3980aeeef167e2cf2",
+        "question": "<p><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 14px;font-family: Roboto, sans-serif;\"><strong>\\text{What is the chemical formula of sodium carbonate?}</strong></span></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "Na_2CO_3",
+                "selected": false,
+                "optionType": "mathematical",
+                "_id": "64339ae3980aeeef167e2cf3"
+            },
+            {
+                "optionId": 2,
+                "value": "NaHCO_3",
+                "selected": false,
+                "optionType": "mathematical",
+                "_id": "64339ae3980aeeef167e2cf4"
+            },
+            {
+                "optionId": 3,
+                "value": "NaCO_3",
+                "selected": false,
+                "optionType": "mathematical",
+                "_id": "64339ae3980aeeef167e2cf5"
+            },
+            {
+                "optionId": 4,
+                "value": "Na_2HCO_3",
+                "selected": false,
+                "optionType": "mathematical",
+                "_id": "64339ae3980aeeef167e2cf6"
+            }
+        ],
+        "answer": 1,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-10T05:13:07.968Z",
+        "updatedAt": "2023-04-10T05:13:07.968Z",
+        "__v": 0
+    },
+    {
+        "_id": "64339e9b980aeeef167e2d08",
+        "question": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-family: Roboto, sans-serif;\"><strong>Identify Apple from the given -</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(97,97,97);background-color: rgb(255,255,255);font-size: 14px;font-family: Roboto, sans-serif;\"><strong>A</strong></span></p>\n<div style=\"text-align:left;\"><img src=\"https://nabhdlm.s3.us-east-2.amazonaws.com/testNabhdlm/wftmIRY4102023105855AMimage.png\" alt=\"undefined\" style=\"width: 150px; height: 150px;\"></div>\n<p><strong>B</strong></p>\n<div style=\"text-align:left;\"><img src=\"https://nabhdlm.s3.us-east-2.amazonaws.com/testNabhdlm/ogfQXD54102023105855AMimage.png\" alt=\"undefined\" style=\"width: 150px; height: 150px;\"></div>\n<p><strong>C</strong></p>\n<div style=\"text-align:left;\"><img src=\"https://nabhdlm.s3.us-east-2.amazonaws.com/testNabhdlm/K8OVZ244102023105855AMimage.png\" alt=\"undefined\" style=\"width: 150px; height: 150px;\"></div>\n<p></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "A",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64339e9b980aeeef167e2d09"
+            },
+            {
+                "optionId": 2,
+                "value": "B",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64339e9b980aeeef167e2d0a"
+            },
+            {
+                "optionId": 3,
+                "value": "C",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64339e9b980aeeef167e2d0b"
+            }
+        ],
+        "answer": 3,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-10T05:28:59.016Z",
+        "updatedAt": "2023-04-10T05:28:59.016Z",
+        "__v": 0
+    },
+    {
+        "_id": "64339f89980aeeef167e2d14",
+        "question": "<p><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Roboto, sans-serif;\"><strong>Identify the \"A\" letter - </strong></span>&nbsp;</p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "C",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64339f89980aeeef167e2d15"
+            },
+            {
+                "optionId": 2,
+                "value": "D",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64339f89980aeeef167e2d16"
+            },
+            {
+                "optionId": 3,
+                "value": "A",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64339f89980aeeef167e2d17"
+            },
+            {
+                "optionId": 4,
+                "value": "V",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64339f89980aeeef167e2d18"
+            }
+        ],
+        "answer": 3,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-10T05:32:57.965Z",
+        "updatedAt": "2023-04-10T05:32:57.965Z",
+        "__v": 0
+    },
+    {
+        "_id": "64339fe3980aeeef167e2d1d",
+        "question": "<p><span style=\"color: rgb(0,0,0);font-size: 18px;\"><strong>Identify the color of the fruit - </strong></span></p>\n<p></p>\n<div style=\"text-align:left;\"><img src=\"https://nabhdlm.s3.us-east-2.amazonaws.com/testNabhdlm/9wYpZCp4102023110425AMimage.png\" alt=\"undefined\" style=\"width: 150px; height: 150px;\"></div>\n<p></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "Green",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64339fe3980aeeef167e2d1e"
+            },
+            {
+                "optionId": 2,
+                "value": "Yellow",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64339fe3980aeeef167e2d1f"
+            },
+            {
+                "optionId": 3,
+                "value": "Blue",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "64339fe3980aeeef167e2d20"
+            }
+        ],
+        "answer": 2,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-10T05:34:27.952Z",
+        "updatedAt": "2023-04-10T05:34:27.952Z",
+        "__v": 0
+    },
+    {
+        "_id": "6433a0af980aeeef167e2d29",
+        "question": "<p><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-family: Roboto, sans-serif;\"><strong>The cost and revenue functions of a product are given by C(x) = 20 x + 4000 and R(x) = 60x + 2000, respectively, where x is the number of items produced and sold. How many items must be sold to realize some profit?</strong></span></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": " the manufacturer should sell more than 50 items",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433a0af980aeeef167e2d2a"
+            },
+            {
+                "optionId": 2,
+                "value": " the manufacturer should sell more than 60 items",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433a0af980aeeef167e2d2b"
+            },
+            {
+                "optionId": 3,
+                "value": " the manufacturer should sell more than 80 items",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433a0af980aeeef167e2d2c"
+            }
+        ],
+        "answer": 1,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-10T05:37:51.566Z",
+        "updatedAt": "2023-04-10T05:37:51.566Z",
+        "__v": 0
+    },
+    {
+        "_id": "6433a156980aeeef167e2d3a",
+        "question": "<p><span style=\"color: rgb(0,0,0);font-size: 16px;\"><strong>Leaf is the food factory of plant.</strong></span></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "True",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433a156980aeeef167e2d3b"
+            },
+            {
+                "optionId": 2,
+                "value": "False",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433a156980aeeef167e2d3c"
+            }
+        ],
+        "answer": 1,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-10T05:40:38.781Z",
+        "updatedAt": "2023-04-10T05:40:38.781Z",
+        "__v": 0
+    },
+    {
+        "_id": "6433a187980aeeef167e2d3f",
+        "question": "<p><span style=\"color: rgb(0,0,0);font-size: 16px;\"><strong>______________ is the food factory of a plant.</strong></span></p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "Leaf",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433a187980aeeef167e2d40"
+            },
+            {
+                "optionId": 2,
+                "value": "Stem",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433a187980aeeef167e2d41"
+            },
+            {
+                "optionId": 3,
+                "value": "Root",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433a187980aeeef167e2d42"
+            },
+            {
+                "optionId": 4,
+                "value": "Flower",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6433a187980aeeef167e2d43"
+            }
+        ],
+        "answer": 1,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-10T05:41:27.759Z",
+        "updatedAt": "2023-04-10T05:41:27.759Z",
+        "__v": 0
+    },
+    {
+        "_id": "6437cf1ecc771265488e2cc6",
+        "question": "<p>Identify subject -</p>\n<p>Ram is a good body.</p>\n",
+        "options": [
+            {
+                "optionId": 1,
+                "value": "Ram",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6437cf1ecc771265488e2cc7"
+            },
+            {
+                "optionId": 2,
+                "value": "is",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6437cf1ecc771265488e2cc8"
+            },
+            {
+                "optionId": 3,
+                "value": "a",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6437cf1ecc771265488e2cc9"
+            },
+            {
+                "optionId": 4,
+                "value": "good boy",
+                "selected": false,
+                "optionType": "normal",
+                "_id": "6437cf1ecc771265488e2cca"
+            }
+        ],
+        "answer": 1,
+        "classId": "6319bc6d3f517db4ffcbe9ac",
+        "subjectId": "630cb6b20852d3d3220d2fc4",
+        "chapterId": "6432e914980aeeef167e2b0a",
+        "topicId": "6432e92d980aeeef167e2b12",
+        "createdAt": "2023-04-13T09:45:02.654Z",
+        "updatedAt": "2023-04-13T09:45:02.654Z",
+        "__v": 0
+    }
+]}

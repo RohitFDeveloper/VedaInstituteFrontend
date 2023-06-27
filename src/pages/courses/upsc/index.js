@@ -90,13 +90,13 @@ const Index = () => {
                     </div>
                 </div>
             </section>
-            <section class="teacher-details">
-                <div class="container">
-                    <div class="row teachers-row justify-content-center">
-                        <div class="col-lg-5 col-md-6 col-sm-8 teachers-col">
-                            <div class="single-teacher-details mt-50 text-center">
-                                <div class="teacher-social">
-                                    <ul class="social">
+            <section className="teacher-details">
+                <div className="container">
+                    <div className="row teachers-row justify-content-center">
+                        <div className="col-lg-5 col-md-6 col-sm-8 teachers-col">
+                            <div className="single-teacher-details mt-50 text-center">
+                                <div className="teacher-social">
+                                    <ul className="social">
                                         {CourseDetails.links.map((data, index) => {
                                             return (
                                                 <li key={index}>
@@ -106,7 +106,7 @@ const Index = () => {
                                                         overlay={<Tooltip id="tooltip-top">{data.title}</Tooltip>}
                                                     >
                                                         <a href={data.link} target="_blank">
-                                                            <i class="fas fa-link"></i>
+                                                            <i className="fas fa-link"></i>
                                                         </a>
                                                     </OverlayTrigger>
                                                 </li>
@@ -114,20 +114,20 @@ const Index = () => {
                                         })}
                                     </ul>
                                 </div>
-                                <div class="teacher-image">
+                                <div className="teacher-image">
                                     <a href="teacher-details.html">
                                         <img src={CourseDetails.posterUrl} width="373" height="503" alt="teacher" />
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-5 teachers-col">
-                            <div class="teacher-details-content mt-45">
-                                <h4 class="teacher-name">{CourseDetails.name}</h4>
-                                <span class="designation">{CourseDetails.title}</span>
-                                {/* <span class="department">Department of Business Administration</span> */}
+                        <div className="col-lg-5 teachers-col">
+                            <div className="teacher-details-content mt-45">
+                                <h4 className="teacher-name">{CourseDetails.name}</h4>
+                                <span className="designation">{CourseDetails.title}</span>
+                                {/* <span className="department">Department of Business Administration</span> */}
                                 <p>{CourseDetails.about}</p>
-                                <ul class="teacher-contact">
+                                <ul className="teacher-contact">
                                     {CourseDetails.pdfs.map((data, index) => {
                                         return (
                                             <li key={index}>
@@ -143,50 +143,50 @@ const Index = () => {
                         </div>
                     </div>
 
-                    <div class="teacher-details-tab">
-                        <div class="tab-content">
-                            <div class="tab-pane fade show active" id="experience">
-                                <div class="row">
-                                    <div class="col-lg-4 col-sm-6">
+                    <div className="teacher-details-tab">
+                        <div className="tab-content">
+                            <div className="tab-pane fade show active" id="experience">
+                                <div className="row">
+                                    <div className="col-lg-4 col-sm-6">
                                         <ul className="nav nav-justified">
-                                            <li class="nav-item">
+                                            <li className="nav-item">
                                                 <a data-bs-toggle="tab" href="#experience">
                                                     {CourseDetails.freeCourse.course}
                                                 </a>
                                             </li>
                                         </ul>
-                                        <div class="single-content-tab px-4">
-                                            {/* <h4 class="title">Limited</h4> */}
+                                        <div className="single-content-tab px-4">
+                                            {/* <h4 className="title">Limited</h4> */}
                                             {CourseDetails.freeCourse.courseFeature.map((data, index) => {
                                                 return <p key={index}>{data.feature}</p>;
                                             })}
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6">
+                                    <div className="col-lg-4 col-sm-6">
                                         <ul className="nav nav-justified">
-                                            <li class="nav-item">
+                                            <li className="nav-item">
                                                 <a data-bs-toggle="tab" href="#experience">
                                                     {CourseDetails.paidCourse.course}
                                                 </a>
                                             </li>
                                         </ul>
-                                        <div class="single-content-tab px-4">
-                                            {/* <h4 class="title">Limited</h4> */}
+                                        <div className="single-content-tab px-4">
+                                            {/* <h4 className="title">Limited</h4> */}
                                             {CourseDetails.paidCourse.courseFeature.map((data, index) => {
                                                 return <p key={index}>{data.feature}</p>;
                                             })}
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6">
+                                    <div className="col-lg-4 col-sm-6">
                                         <ul className="nav nav-justified">
-                                            <li class="nav-item">
+                                            <li className="nav-item">
                                                 <a data-bs-toggle="tab" href="#experience">
                                                     Enroll Course
                                                 </a>
                                             </li>
                                         </ul>
-                                        <div class="single-content-tab px-4" style={{ textAlign: 'center' }}>
-                                            <h4 class="title">
+                                        <div className="single-content-tab px-4" style={{ textAlign: 'center' }}>
+                                            <h4 className="title">
                                                 <a href="#" target="_blank">
                                                     Click Here
                                                 </a>

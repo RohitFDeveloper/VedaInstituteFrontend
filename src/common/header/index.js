@@ -2,25 +2,29 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { login, logout, selectUser } from 'features/userSlice';
 // bootstrap
 import { Button, Container, Nav, Navbar, NavDropdown, Row, Col, Offcanvas, Stack, Accordion, Card } from 'react-bootstrap';
-
+//toast
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // project imports
 import logo from 'assets/images/logo.png';
 import Logo from 'common/logo/index';
+import constants from 'constants';
 
 // const datas
 const topMenuData = [
     {
         title: 'Publication Books',
-        url: '/',
+        url: 'publication',
         dropdown: false
     },
     {
         title: 'Online Test Series',
-        url: '/',
+        url: 'online-test-series',
         dropdown: false
     },
     {
@@ -35,7 +39,7 @@ const topMenuData = [
     },
     {
         title: 'Scholarship Test',
-        url: '/',
+        url: 'scholarship-test',
         dropdown: false
     },
     {
@@ -64,29 +68,34 @@ const mainMenuData = [
         dropdown: false,
         url: 'about-us'
     },
+    // {
+    //     title: 'Courses',
+    //     dropdown: true,
+    //     submenu: [
+    //         {
+    //             title: 'UPSC',
+    //             url: 'course/upsc'
+    //         },
+    //         {
+    //             title: 'SSC',
+    //             url: 'course/ssc'
+    //         },
+    //         {
+    //             title: 'Bank PO',
+    //             url: 'course/bank-po'
+    //         }
+    //     ]
+    // },
     {
         title: 'Courses',
-        dropdown: true,
-        submenu: [
-            {
-                title: 'UPSC',
-                url: 'course/upsc'
-            },
-            {
-                title: 'SSC',
-                url: 'course/ssc'
-            },
-            {
-                title: 'Bank PO',
-                url: 'course/bank-po'
-            }
-        ]
-    },
-    {
-        title: 'Publication Books',
         dropdown: false,
-        url: '/'
+        url: 'courses'
     },
+    // {
+    //     title: 'Publication Books',
+    //     dropdown: false,
+    //     url: 'publication'
+    // },
     {
         title: 'Gallery',
         dropdown: false,
@@ -105,7 +114,12 @@ const mainMenuData = [
     {
         title: 'Daily Current Updates',
         dropdown: false,
-        url: '/'
+        url: 'daily-current-updates'
+    },
+    {
+        title: 'My Courses',
+        dropdown: false,
+        url: 'my-courses'
     },
     {
         title: 'Contact Us',
@@ -114,13 +128,33 @@ const mainMenuData = [
     }
 ];
 function Index() {
+    // const user = useSelector(selectUser);
+    // const dispatch = useDispatch();
+    // console.log(user != null ? user.loggedIn : null);
+    const isloggedin = localStorage.getItem('loggedIn') == null ? false : localStorage.getItem('loggedIn');
     const isMobile = useMediaQuery({ maxWidth: 991 });
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        // dispatch(logout());
+        localStorage.removeItem('loggedIn');
+        toast.error('Logout Successfully !', {
+            theme: 'colored',
+            position: 'bottom-right',
+            style: {
+                color: '#fff',
+                background: 'var(--errorMain)'
+            }
+        });
+    };
     // exta css
     const style = {
         links: {
             fontWeight: 600,
             color: isMobile ? '#fff' : '#07294d',
-            textDecoration: 'none'
+            textDecoration: 'none',
+            '.navLink::hover': {
+                color: 'red'
+            }
         },
         sublinks: {
             color: '#07294d',
@@ -150,7 +184,10 @@ function Index() {
     const [MainMenu, setMainMenu] = useState(mainMenuData);
     const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
+    const handleClose = (url) => {
+        setShow(false);
+        navigate(url);
+    };
     const handleShow = () => setShow(true);
     return isMobile ? (
         <>
@@ -209,10 +246,13 @@ function Index() {
                                     </Accordion>
                                 </>
                             ) : (
-                                <Button variant="outline-secondary" style={style.buttonLink} key={index} onClick={handleClose}>
-                                    <Link style={style.links} to={data.url}>
-                                        {data.title}
-                                    </Link>
+                                <Button
+                                    variant="outline-secondary"
+                                    style={style.buttonLink}
+                                    key={index}
+                                    onClick={() => handleClose(data.url)}
+                                >
+                                    <span style={style.links}>{data.title}</span>
                                 </Button>
                             );
                         })}
@@ -237,10 +277,13 @@ function Index() {
                                     </Accordion>
                                 </>
                             ) : (
-                                <Button variant="outline-secondary" style={style.buttonLink} key={index} onClick={handleClose}>
-                                    <Link style={style.links} to={data.url}>
-                                        {data.title}
-                                    </Link>
+                                <Button
+                                    variant="outline-secondary"
+                                    style={style.buttonLink}
+                                    key={index}
+                                    onClick={() => handleClose(data.url)}
+                                >
+                                    <span style={style.links}>{data.title}</span>
                                 </Button>
                             );
                         })}
@@ -269,8 +312,10 @@ function Index() {
                                                             {data.submenu.map((data, index) => {
                                                                 return (
                                                                     <>
-                                                                        <NavDropdown.Item key={index}>
-                                                                            <Link to={data.url}>{data.title}</Link>
+                                                                        <NavDropdown.Item key={index} activeClassName="active">
+                                                                            <Link to={data.url} activeClassName="active">
+                                                                                {data.title}
+                                                                            </Link>
                                                                         </NavDropdown.Item>
                                                                         <NavDropdown.Divider />
                                                                     </>
@@ -292,17 +337,35 @@ function Index() {
                                         <Row>
                                             <Col style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }}>
                                                 <Nav.Link style={style.links}>
-                                                    <Link to="/login">
-                                                        <i className="fas fa-sign-in-alt" style={{ margin: '0 5px' }}></i>
-                                                        Login
-                                                    </Link>
+                                                    {isloggedin ? (
+                                                        <Link
+                                                            to="#"
+                                                            onClick={handleLogout}
+                                                            style={{ display: 'flex', alignItems: 'center' }}
+                                                        >
+                                                            <i className="fas fa-sign-out-alt" style={{ margin: '0 5px' }}></i>
+                                                            Logout
+                                                        </Link>
+                                                    ) : (
+                                                        <Link to="/login" style={{ display: 'flex', alignItems: 'center' }}>
+                                                            <i className="fas fa-sign-in-alt" style={{ margin: '0 5px' }}></i>
+                                                            Login
+                                                        </Link>
+                                                    )}
                                                 </Nav.Link>
                                                 <span>|</span>
                                                 <Nav.Link style={style.links}>
-                                                    <Link to="/register">
-                                                        <i className="fas fa-user-plus" style={{ margin: '0 5px' }}></i>
-                                                        Register
-                                                    </Link>
+                                                    {isloggedin ? (
+                                                        <Link to="/profile" style={{ display: 'flex', alignItems: 'center' }}>
+                                                            <i className="fas fa-user-circle" style={{ margin: '0 5px' }}></i>
+                                                            Profile
+                                                        </Link>
+                                                    ) : (
+                                                        <Link to="/register" style={{ display: 'flex', alignItems: 'center' }}>
+                                                            <i className="fas fa-user-plus" style={{ margin: '0 5px' }}></i>
+                                                            Register
+                                                        </Link>
+                                                    )}
                                                 </Nav.Link>
                                             </Col>
                                         </Row>
@@ -323,7 +386,14 @@ function Index() {
                         <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
                             {mainMenuData.map((data, index) => {
                                 return data.dropdown ? (
-                                    <NavDropdown title={<span style={style.links}>{data.title}</span>} id="navbarScrollingDropdown">
+                                    <NavDropdown
+                                        title={
+                                            <span style={style.links} className="MainLink">
+                                                {data.title}
+                                            </span>
+                                        }
+                                        id="navbarScrollingDropdown"
+                                    >
                                         {data.submenu.map((data, index) => {
                                             return (
                                                 <>
@@ -336,8 +406,10 @@ function Index() {
                                         })}
                                     </NavDropdown>
                                 ) : (
-                                    <Nav.Link style={style.links} key={index}>
-                                        <Link to={data.url}>{data.title}</Link>
+                                    <Nav.Link style={style.links} key={index} className="navLink MainLink">
+                                        <NavLink exact to={data.url} className={({ isActive }) => (isActive ? 'ActiveMainLink' : null)}>
+                                            {data.title}
+                                        </NavLink>
                                     </Nav.Link>
                                 );
                             })}
