@@ -17,12 +17,12 @@ import envVariables from 'environment.js';
 import vedaInfo from 'vedaInfo';
 const advertiseMsg = [
     {
-        msg: 'Grow Faster, Higher and Stronger!!',
-        blink: false
+        title: 'Grow Faster, Higher and Stronger!!',
+        is_highlighted: false
     },
     {
         msg: 'Hurry Up!! Join Us',
-        blink: true
+        is_highlighted: true
     }
 ];
 const contactData = [
@@ -42,7 +42,7 @@ const contactData = [
 
 function Index() {
     const isMobile = useMediaQuery({ maxWidth: 767 });
-    const [AdsMsg, setAdsMsg] = useState([]);
+    const [AdsMsg, setAdsMsg] = useState(advertiseMsg);
     const [ContactInfo, setContactInfo] = useState(contactData);
     async function fetchNotifications() {
         await axios

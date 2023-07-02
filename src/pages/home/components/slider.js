@@ -22,25 +22,25 @@ import Image2 from 'assets/images/slider-2.webp';
 // datas
 const sliderData = [
     {
-        imageUrl: Image1,
+        image_url: Image1,
         title: 'Education is the most powerful Weapon msg 1',
-        url: '/'
-    },
-    {
-        imageUrl: Image1,
-        title: 'Education is the most powerful Weapon msg 2',
-        url: '/'
-    },
-    {
-        imageUrl: Image1,
-        title: 'Education is the most powerful Weapon msg 3',
-        url: '/'
+        link: '/'
     }
+    // {
+    //     image_url: Image1,
+    //     title: 'Education is the most powerful Weapon msg 2',
+    //     link: '/'
+    // },
+    // {
+    //     image_url: Image1,
+    //     title: 'Education is the most powerful Weapon msg 3',
+    //     link: '/'
+    // }
 ];
 
 const Slider = () => {
     const isMobile = useMediaQuery({ maxWidth: 767 });
-    const [Slider, setSlider] = useState([]);
+    const [Slider, setSlider] = useState(sliderData);
     async function fetchSlides() {
         await axios
             .get(`${envVariables.baseURL}api/home-page-slider-list`)
@@ -92,15 +92,23 @@ const Slider = () => {
                                           </Carousel.Caption>
                                       ) : (
                                           <Carousel.Caption>
-                                              <ul className="slider-btn">
-                                                  {data.link != null ? (
-                                                      <li>
-                                                          <Link className="main-btn main-btn-2" target="_blank" to={data.link}>
-                                                              Custom
-                                                          </Link>
-                                                      </li>
-                                                  ) : null}
-                                              </ul>
+                                              {/* <ul className="slider-btn"> */}
+                                              {data.link != null ? (
+                                                  //   <li>
+                                                  <Link
+                                                      style={{
+                                                          backgroundColor: '#000000a8',
+                                                          padding: '5px 10px',
+                                                          borderRadius: '5px'
+                                                      }}
+                                                      target="_blank"
+                                                      to={data.link}
+                                                  >
+                                                      Custom
+                                                  </Link>
+                                              ) : //   </li>
+                                              null}
+                                              {/* </ul> */}
                                           </Carousel.Caption>
                                       )}
                                   </Carousel.Item>

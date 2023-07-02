@@ -15,7 +15,7 @@ import axios from 'axios';
 import envVariables from 'environment.js';
 
 export default function AwardsAchievement() {
-    const [awardsList, setAwardsList] = useState([]);
+    const [awardsList, setAwardsList] = useState(productData);
     async function fetchAwardslist() {
         await axios
             .get(`${envVariables.baseURL}api/award-list`)

@@ -22,58 +22,58 @@ export const responsive = {
 export const productData = [
     {
         id: 1,
-        imageurl:
+        image_url:
             'https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1452&q=80',
-        name: 'Award Tittle 1',
+        title: 'Award Tittle 1',
         description: 'Exam | Rank'
     },
     {
         id: 2,
-        imageurl:
+        image_url:
             'https://images.unsplash.com/photo-1571193161738-deaba9b6cc26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1490&q=80',
-        name: 'Award Tittle 2',
+        title: 'Award Tittle 2',
         description: 'Exam | Rank'
     },
     {
         id: 3,
-        imageurl:
+        image_url:
             'https://images.unsplash.com/photo-1568822617270-2c1579f8dfe2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80',
-        name: 'Award Tittle 3',
+        title: 'Award Tittle 3',
         description: 'Exam | Rank'
     },
     {
         id: 4,
-        imageurl:
+        image_url:
             'https://images.unsplash.com/photo-1545696968-1a5245650b36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1432&q=80',
-        name: 'Award Tittle 4',
+        title: 'Award Tittle 4',
         description: 'Exam | Rank'
     },
     {
         id: 5,
-        imageurl:
+        image_url:
             'https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1452&q=80',
-        name: 'Award Tittle 5',
+        title: 'Award Tittle 5',
         description: 'Exam | Rank'
     },
     {
         id: 6,
-        imageurl:
+        image_url:
             'https://images.unsplash.com/photo-1571193161738-deaba9b6cc26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1490&q=80',
-        name: 'Award Tittle 6',
+        title: 'Award Tittle 6',
         description: 'Exam | Rank'
     },
     {
         id: 7,
-        imageurl:
+        image_url:
             'https://images.unsplash.com/photo-1568822617270-2c1579f8dfe2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80',
-        name: 'Award Tittle 7',
+        title: 'Award Tittle 7',
         description: 'Exam | Rank'
     },
     {
         id: 8,
-        imageurl:
+        image_url:
             'https://images.unsplash.com/photo-1545696968-1a5245650b36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1432&q=80',
-        name: 'Award Tittle 8',
+        title: 'Award Tittle 8',
         description: 'Exam | Rank'
     }
 ];

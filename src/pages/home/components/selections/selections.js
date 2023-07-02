@@ -15,13 +15,13 @@ import axios from 'axios';
 import envVariables from 'environment.js';
 
 export default function Selections() {
-    const [topStudentList, settopStudentList] = useState([]);
+    const [topStudentList, settopStudentList] = useState(productData);
     async function fetchtopStudentList() {
         await axios
             .get(`${envVariables.baseURL}api/top-students`)
             .then((res) => {
-                console.log(res.data.data);
-                settopStudentList(res.data.data);
+                // console.log(res.data.data);
+                // settopStudentList(res.data.data);
                 // console.log(res);
             })
             .catch((error) => {
